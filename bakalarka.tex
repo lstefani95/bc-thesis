@@ -1,0 +1,354 @@
+\documentclass[
+  digital, %% This option enables the default options for the
+           %% digital version of a document. Replace with `printed`
+           %% to enable the default options for the printed version
+           %% of a document.
+  oneside, %% This option enables double-sided typesetting. Use at
+           %% least 120 g/m² paper to prevent show-through. Replace
+           %% with `oneside` to use one-sided typesetting; use only
+           %% if you don’t have access to a double-sided printer,
+           %% or if one-sided typesetting is a formal requirement
+           %% at your faculty.
+  notable,   %% This option causes the coloring of tables. Replace
+           %% with `notable` to restore plain LaTeX tables.
+  lof,     %% This option prints the List of Figures. Replace with
+           %% `nolof` to hide the List of Figures.
+  lot,     %% This option prints the List of Tables. Replace with
+           %% `nolot` to hide the List of Tables.
+  %% More options are listed in the user guide at
+  %% <http://mirrors.ctan.org/macros/latex/contrib/fithesis/guide/mu/econ.pdf>.
+]{fithesis3}
+%% The following section sets up the locales used in the thesis.
+\usepackage[resetfonts]{cmap} %% We need to load the T2A font encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}  %% to use the Cyrillic fonts with Russian texts.
+\usepackage[
+  main=slovak, %% By using `czech` or `slovak` as the main locale
+                %% instead of `english`, you can typeset the thesis
+                %% in either Czech or Slovak, respectively.
+  english, german, russian, slovak %% The additional keys allow
+]{babel}        %% foreign texts to be typeset as follows:
+%%
+%%   \begin{otherlanguage}{german}  ... \end{otherlanguage}
+%%   \begin{otherlanguage}{russian} ... \end{otherlanguage}
+%%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
+%%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
+%%
+%% For non-Latin scripts, it may be necessary to load additional
+%% fonts:
+\usepackage{paratype}
+
+
+
+%%
+%% The following section sets up the metadata of the thesis.
+\thesissetup{
+    date               = \the\year/\the\month/\the\day,
+    autoLayout         = false,
+    university         = mu,
+    faculty            = econ,
+    type               = bc,
+    field              = Hospodárska politika,
+    department         = Katedra ekonómie,
+    author             = Lenka Štefanidesová,
+    gender             = f,
+    advisor            = {Ing. Rostislav Staněk, Phd.},
+    extra              = {
+      advisorSkGenitiv = {Ing. Rostislava Staňeka, Phd.}
+    },
+    title              = { \makecell[l]{Motivačný efekt priebežného výsledku: \\ Robustnosť evidencie zo športových zápasov}},
+    TeXtitle           = Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov,
+    keywords           = {keyword1, keyword2, ...},
+    TeXkeywords        = {keyword1, keyword2, \ldots},
+    abstract           = {This is the abstract of my thesis, which
+                          can
+
+                          span multiple paragraphs.},
+    thanks             = {These are the acknowledgements for my
+                          thesis, which can
+
+                          span multiple paragraphs.},
+    bib                = bibliografia.bib,
+    %% Uncomment the following line (by removing the % symbol at
+    %% the beginning) and replace `assignment.pdf` with the
+    %% filename of your scanned thesis assignment.
+    % assignment    = assignment.pdf,
+    %% The following keys are only useful, when you're using a
+    %% locale other than English. You can safely omit them in an
+    %% English thesis.
+    titleEn            = { \makecell[l]{Incentive effect of intermediate result: \\ Robustness check of sport matches evidence}},
+    TeXtitleEn         = Incentive effect of intermediate result: Robustness check of sport matches evidence,
+    keywordsEn         = {keyword1, keyword2, ...},
+    TeXkeywordsEn      = {keyword1, keyword2, \ldots},
+    abstractEn         = {This is the English abstract of my
+                          thesis, which can
+
+                          span multiple paragraphs.},
+}
+\usepackage{makeidx}      %% The `makeidx` package contains
+\makeindex                %% helper commands for index typesetting.
+%% These additional packages are used within the document:
+\usepackage{paralist} %% Compact list environments
+\usepackage{amsmath}  %% Mathematics
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{url}      %% Hyperlinks
+\usepackage{markdown} %% Lightweight markup
+\usepackage{listings} %% Source code highlighting
+\lstset{
+  basicstyle      = \ttfamily,%
+  identifierstyle = \color{black},%
+  keywordstyle    = \color{blue},%
+  keywordstyle    = {[2]\color{cyan}},%
+  keywordstyle    = {[3]\color{olive}},%
+  stringstyle     = \color{teal},%
+  commentstyle    = \itshape\color{magenta}}
+\usepackage{floatrow} %% Putting captions above tables
+\floatsetup[table]{capposition=top}
+\usepackage{chngcntr}
+\counterwithout{table}{chapter}  % Flat numbering of tables.
+\counterwithout{figure}{chapter} % Flat numbering of figures.
+
+
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[noabbrev,capitalise]{cleveref}
+\usepackage{tabularx}
+
+\begin{document}
+	\makeatletter
+	\thesis@preamble %% Print the preamble.
+	\makeatother
+	
+	\chapter*{Úvod}
+	\addcontentsline{toc}{chapter}{Úvod}
+	
+	V ďalšom kroku bol stĺpec \textit{Výsledky} premenovaný na 	\texttt{WIN}. Tento stĺpec obsahoval 1 pre výhru domáceho tímu a 2 pre jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty 2 boli prekódované na hodnoty 0. \parencite{merritt2014}
+	
+	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
+
+	\chapter{Prepojenie športu a ekonómie}
+
+	\chapter{Teória motivačného efektu}
+
+	\chapter{Literárny rešerš}
+	Téma teórie motivačného efektu sa stala predmetom skúmania mnohých autorov. Nasledujúca kapitola obsahuje dovedna 5 prác, ktoré tvoria prehľad literatúry a rôznych prístupov a využitých nástrojov a metód viažucich sa k téme tejto bakalárskej práce, tzn. motivačnému efektu. 
+	
+		\section{Berger a Pope}
+		Hlavnou prácou, o ktorú sa v našej bakalárskej práci opierame je článok Bergera a Popa (\citeyear{berger2011}) s príznačným názvom \textit{Can Loosing Lead to Winning?}. Táto práca ma jednoznačný cieľ a to ukázať na reálnych dátach, že byť trochu pozadu môže v konečnom dôsledku viesť k zvýšeniu šancu na výhru a tak viesť k celkovému víťazstvu a to prostredníctvom ničoho iného ako motivácie.
+		
+		Rovnako ako naša práca, aj Berger a Pope spracovávali dáta z basketbalových zápasov, skúmali, ako prehrávanie o trochu ovplyvňuje motiváciu a výkon a využili model regresnej diskontinuity. 
+		
+		Dataset v štúdii tvorilo viac ako 18 000 zápasov profesionálnej NBA, v rozmedzí sezóny 1993/1994 a marca 2009, a viac ako 45 000 zápasov americkej univerzitnej basketbalovej ligy známej pod skratkou NCAA, ktoré sú z obdobia medzi sezónou 1999/2000 a marcom 2009. \parencite[s.~818]{berger2011} Dáta obsahujú okrem informácie kto bol víťazom zápasu aj údaje o bodovom skóre oboch tímov v polčase.
+		
+		Využitý ekonometrický model mal nasledovnú podobu:
+		\begin{equation}
+		win_{i} = \alpha + \beta [\textit{losing~at~halftime}]_{i} + \delta [\textit{score~difference~at~halftime}]_{i} + \gamma X_{i} + \varepsilon_{i},
+		\end{equation}
+		kde \textit{ win $ _{i} $} predstavuje umelú vysvetľovanú premennú, ktorá nadobúda hodnotu jedna keď domáci tím zápas vyhral a nula keď ho prehral, \textit{losing~at~halftime$ _{i} $} je vysvetľujúca premenná, ktorá je taktiež umelou premennou a nadobúda hodnotu jedna keď domáci tím prehráva v polčase o jeden a viac bodov a nula keď vyhráva. Druhou vysvetľujúcou premennou je \textit{score~difference~at~halftime$ _{i} $}, ktorá pozostáva z rozdielu v skóre medzi domácim a hosťujúcim tímom. \textit{Xi} v modeli reprezentuje maticu kontrolných premenných, ktorými sú výherné percentá domáceho a hosťujúceho tímu.  V modeli sa nachádza aj $\alpha$ ako úrovňová konštanta a $\varepsilon_{i}$, čiže náhodná zložka.
+	
+		\begin{table}[t]
+			\catcode`\-=12
+			\centering	
+			\bgroup
+			\def\arraystretch{1.5}
+			\begin{tabular}{|l||c c c c|}
+				\hline
+				
+				\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ win_{i} $ = 1 ak domáci tím vyhral zápas} \\ \cline{2-5}
+				& (1) & (2) & (3) & (4) \\ 
+				\hline \hline
+								
+ 				\multirow{2}{*}{\textit{Prehrávanie v polčase}} & 0,058*** & 0,074*** & 0,062*** & 0,080*** \\
+ 				& (0,015) & (0,021) & (0,015) & (0,020) \\ 
+ 				\hline
+				
+				\textit{Domáci tím} &  &  & 0,0068*** & 0,0068*** \\
+				\multicolumn{1}{|r||}{\textit{výherné percento}} & & & (0,0002) & (0,002) \\ 
+				\hline	
+				
+				\textit{Hosťujúci tím} &  &  & -0,0065*** & -0,0065*** \\
+				\multicolumn{1}{|r||}{\textit{výherné percento}} & & & (0,0002) & (0,002) \\ 
+				\hline
+				
+				\textit{Bodový rozdiel v polčase} & X & X & X & X \\
+				\multicolumn{1}{|r||}{(\textit{lineárny})} & & & & \\ 
+				\hline
+				
+				\textit{Bodový rozdiel v polčase} & & X & & X \\
+				\multicolumn{1}{|r||}{(\textit{kubický})} & & & & \\ 
+				\hline
+				
+				$ Pseudo-R^{2} $ & 0,097 & 0,097 & 1,172 & 1,172 \\ 
+				\hline
+				
+			\end{tabular}
+			\egroup
+			\caption{Vplyv prehrávania v polčase na výhru (NBA dáta)}
+			\vskip\abovecaptionskip\emph{Zdroj: <<\cite{berger2011} a vlastné spracovanie>>}
+			\label{table:vplyv1;}
+		\end{table}
+	
+	\vspace{1em}
+	\begin{table}[h]
+		\begin{tabularx}{\textwidth}{|c||c|c|c|}
+			\hline
+			\multicolumn{4}{|c|}{\textbf{Výsledky pre hašovaciu funkciu Tangle}} \\
+			\hline \hline
+			\vspace{0.1em}
+			\textbf{Počet rúnd} &
+			\vspace{0.1em}
+			\begin{tabular}[b]{@{}c}\large\textbf{Bežné uzly} \\ \scriptsize(30000 generácií) \end{tabular} &
+			
+			\vspace{0.1em}
+			\begin{tabular}[b]{@{}c}\large\textbf{JVM simulátor} \\ \scriptsize(30000 generácií) \end{tabular} &
+			\vspace{0.1em}
+			\begin{tabular}[b]{@{}c}\large\textbf{JVM simulátor} \\ \scriptsize(300000 generácií) \end{tabular} \\
+			\hline\hline
+			21 & 0.944 & 0.270 & 0.461 \\
+			\hline
+			22 & 0.932 & 0.267 & 0.46 \\
+			\hline
+			23 & 0.066 & 0.036 & 0.050 \\
+			\hline
+			
+		\end{tabularx}
+		\caption{Výsledky pre hašovaciu funkciu Tangle pri použití JVM uzlov, ktoré napodobňujú bežné uzly.}
+		\label{tab:exp1}
+	\end{table}
+	
+		Výsledky štúdie v oblasti zápasov NBA potvrdzujú predpoklad autorov z úvodu práce a to, že byť trochu pozadu môže viesť k výhre. Síce čím viac tím vyhráva, resp. prehráva v polčase, tým je pravdepodobnejšie, že v konečnom dôsledku vyhrá, resp. prehrá. Avšak výsledky ukazujú aj to, že tímy, ktoré prehrávajú v polčase iba o trochu, vo výsledku vyhrávajú v porovnaní s očakávaním častejšie o 5,8 až 8,0 percentných bodov, viď \ref{table:vplyv1;}. Berger a Pope tým hovoria, že namiesto toho, aby domáci tím prehrávajúci o bod mal o približne 5 až 8 percentných bodov nižšiu pravdepodobnosť výhry, takto prehrávajúce tímy sú pravdepodobnejšími víťazmi celého zápasu a vyhrávajú v 58,2\% oproti 57,1\%. \parencite[s.~820]{berger2011}
+		
+		Zaujímavé je upozornenie autorov, že tento efekt polčasového prehrávania je približne polovičnej veľkosti ako všeobecne populárny efekt domácej výhody. \parencite[s.~817]{berger2011} 
+
+		\section{Merritt a Clauset}
+		Basketbal nie je jediný šport, ktorý bol podrobený skúmaniu v súvislosti s teóriou motivačného efektu. Štúdia Merritta a Clauseta (\citeyear{merritt2014}) sa okrem basketbalu venovala aj ďalším športom: americkému futbalu a hokeju. Autori sa zaoberajú pravdepodobnosťou ďalšieho skórovania pri vyhrávaní, resp. prehrávaní a skúmajú, či veľkosť vedenia v zápase poskytuje informáciu o tom, kto získa ďalšie body, tzn. dynamiku skórovania. To samo o sebe nie je predmetom tejto bakalárskej práce, avšak výsledky štúdie \textit{Scoring dynamics across professional team sports: tempo, balance and predictability} obsahujú zaujímavé poznatky aj z oblasti motivačného efektu.
+		
+		Dataset tejto štúdie je pomerne rozsiahly a predstavujú ho zápasy počas 9 až 10  sezón štyroch amerických športových líg: CFL\footnote{Skratka autorov, ide o Univerzitnú ligu amerického futbalu.}, NFL\footnote{Celý názov National Football League, v preklade Národná futbalová liga.}, NBA a NHL\footnote{Celý názov National Hockey League, v preklade Národná hokejová liga.}. V štúdii autori pracujú s viac ako 40 000 zápasmi, viď \ref{table:summary1;}, a spracovávajú ich kombináciou Bernoulliho a Poissonovým procesom.
+	
+		\begin{table}[t]
+			\catcode`\-=12
+			\centering	
+			\begin{tabular}{|l|c|c|c|c|c|}
+				\hline
+				
+				Šport & Typ & Skratka & Sezóna & Počet zápasov & Počet skórovaní \\ \hline \hline
+				
+				Americký futbal & univerzitný & CFB & 10, 2000-2009 & 14 588 & 120 827 \\
+				
+				Americký futbal & pro & NFL & 10, 2000-2009 & 2 654 & 19 476 \\
+				
+				Hokej & pro & NHL & 10, 2000-2009 & 11 813 & 44 989 \\
+			
+				Basketbal & pro & NBA & 9, 2002-2010 & 11 744 & 1 080 285 \\ \hline				
+			\end{tabular}
+			\caption{Prehľad dát pre každý šport.}
+			\vskip\abovecaptionskip\emph{Zdroj: <<\cite{merritt2014} a vlastné spracovanie>>}
+			\label{table:summary1;}
+		\end{table}
+	
+		Výsledky štúdie nie sú totožné naprieč všetkými štyrmi ligami. Pravdepodobnosť ďalšieho skórovania sa v CFL, NFL a NHL zvyšuje s veľkosťou vedenia, zatiaľ čo v prípade NBA, teda basketbalu, sa táto pravdepodobnosť znižuje. Plynutím hry  tak môže dôjsť k zmenšovaniu vedúcej pozície až kým vedenie nezmení v remízu, čo vytvára z basketbalu v podstate nepredvídateľnú hru. Podľa autorov je jedným z možných vysvetlení práve motivačný efekt, kedy sa prehrávajúci tím snaží  jednoducho viac, tzn. že pravdepodobnosť skórovania je vyššia. Nie je však jasné, prečo by sa tento fenomén objavil iba v prípade NBA. \parencite[s.~18]{merritt2014}
+	
+		Autori však ponúkajú zdôvodnenie, podľa ktorého to môžu spôsobovať stratégie tímov NBA, ktoré sú špecifické práve pre tento šport. Ako príklad je možné spomenúť stiahnutie lepších a skúsenejších hráčov zo zápasu pri vedení, aby sa zbytočne neprepínali  alebo aby sa dokonca nezranili. Bez týchto hráčov sa pravdepodobnosť skórovania pre vedúci tým znižuje. Oproti tomu v hokeji hráči rotujú v jednotlivých formáciách a v americkom futbale sa takéto „náhrady“ nie sú časté. \parencite[s.~19]{merritt2014}
+	
+		\section{Bergerhoff a Vosen}
+		Bergerhoff a Vosen (\citeyear{bergerhoff2015}) sa taktiež zameriavajú na fenomén, kedy byť pozadu, môže byť výhodnejšie. Špecifikom tejto štúdie je testovanie predmetu skúmania prostredníctvom modelovej situácie, tzn. bez použitia reálnych dát.
+		
+		Výsledné zistenia sú, že cena turnaja, ligy či súťaže, napr. finančné ohodnotenie, trofej alebo prestíž z výhry, a tesná hra motivujú hráčov prekonať prípadnú počiatočnú nevýhodu , vynaložiť viac úsilia a preto majú títo hráči vyššiu pravdepodobnosť výhry. \parencite[s.~20]{bergerhoff2015} Dalo by sa povedať, že keď počiatočné znevýhodnenie silno zvýhodňuje jednu stranu, tá je motivovanejšia a vyvíja väčšiu snahu, avšak keď je rozdiel minimálny a teda tesný, tá strana, ktorá mierne stráca sa ukazuje ako motivovanejšia a snaživejšia.
+		
+		Tieto výsledky, ako uznávajú aj samotní autori, vysvetľujú a podporujú závery Bergera a Popa (\citeyear{berger2011}), ktoré sú spomenuté vyššie v časti xx.
+		
+		\section{Barankay}
+		Rozdielne výsledky priniesla štúdia Barankaya (\citeyear{barankay2010}), ktorá sa síce nezameriava na oblasť športu, avšak skúma do akej miery vie porovnávanie sa s druhými, ktoré prebieha napríklad počas celej dĺžky športových zápasov a ešte viac v čase prestávky, ovplyvniť ľudské správanie a teda zvýšiť alebo znížiť snahu.
+		
+		Cieľom využitého field experimentu bolo zistiť, ako ľudia prispôsobia svoju snahu v prípade, že dostanú hodnotenie svojej práce v porovnaní s ostatnými zamestnancami. 
+		
+		Účastníci tohto experimentu, zamestnanci, boli najatí na prácu analýzy obrázkov. Zamestnanci boli následne rozdelení do dvoch skupín, pričom členovia experimentálnej skupiny dostali spätnú väzbu o tom, aké je ich hodnotenie voči ostatným v otázke presnosti ich práce. 
+		
+		Výsledkom experimentálnej skupiny oproti kontrolnej skupine bola 30\% šanca, že sa zamestnanci do práce nevrátia, a ak sa vrátia, sú o 22\% menej výkonní. To znamená, že závery tejto štúdie poukazujú na fakt, že pri „prehrávaní“ nedochádza k zlepšeniu, práve naopak, prevláda demotivácia. \parencite[s.~4]{barankay2010}
+		
+		V tomto experimente však hodnotenia nemali vplyv na finančné ohodnotenie zamestnancov, zatiaľ čo pri športových zápasoch by sa dalo argumentovať, že vzájomné porovnávanie dvoch tímov počas zápasu môže ovplyvniť motiváciu tímu iným spôsobom a do inej miery a to za predpokladu, že lepšie výsledky tímu a viac výhier môžu znamenať viac peňazí pre tím a teda lepšie finančné ohodnotenie jednotlivých hráčov.
+		
+		\section{Schneemann}
+		Ďalšou štúdiou, ktorá sa výsledkom nezhoduje s prácou Bergera a Popa (\citeyear{berger2011}) je štúdia Schneemanna a Deutschera (\citeyear{schneemann2017}). Dataset v tomto prípade tvorili zápasy nemeckej futbalovej Bundesligy a to z dvoch sezón  2011/2012 a 2013/2014, čo dovedna tvorí 918 zápasov. Autori na spracovanie dát využívali deskriptívnu štatistiku a regresnú analýzu.
+		
+		Z mnohých výsledkov a zistení tejto práce sú pre túto bakalársku prácu najrelevantnejšie zistenia týkajúce sa motivácie hráčov počas zápasu v závislosti od jeho vývoja. Pri interpretácií výsledkov je dôležité brať do úvahy bodovanie výsledného skóre futbalového zápasu a medzné straty tímov pri jednotlivých výsledkoch (\ref{table:tabulka;}).
+		
+		\begin{table}[t]
+			\catcode`\-=12
+			\centering	
+			\begin{tabular}{|l|c|c|c|c|c|}
+				\hline
+				
+				Šport & Typ & Skratka & Sezóna & Počet zápasov & Počet skórovaní \\ \hline \hline
+				
+				Americký futbal & univerzitný & CFB & 10, 2000-2009 & 14 588 & 120 827 \\
+				
+				Americký futbal & pro & NFL & 10, 2000-2009 & 2 654 & 19 476 \\
+				
+				Hokej & pro & NHL & 10, 2000-2009 & 11 813 & 44 989 \\
+				
+				Basketbal & pro & NBA & 9, 2002-2010 & 11 744 & 1 080 285 \\ \hline				
+			\end{tabular}
+			\caption{Tabuľka.}
+			\vskip\abovecaptionskip\emph{Zdroj: <<\cite{merritt2014} a vlastné spracovanie>>}
+			\label{table:tabulka;}
+		\end{table}
+		
+		Najväčšia motivácia sa prejavila v prípade, keď tím viedol o jeden gól. Akonáhle tím zaostával za súperom o jeden gól, motivácia bola v porovnaní s remízovým skóre alebo vedúcim skóre podstatne nižšia. Autori tento fenomén opodstatňujú hráčskou averziou voči prehre, tzn. že oveľa viac im záleží na tom, aby sa vyhli prehre ako na tom, aby získali výhru. 
+		
+		V prípade, že tím vedie v zápase jednogólovým rozdielom, stačí jeho súperovi jediný gól na to, aby sa stav zmenil na remízu a doteraz vyhrávajúci tím by prišiel o dva body. Možnosť straty dvoch bodov je pre tím väčším podnetom, ako možnosť získať dva body~\footnote{V situácií remízy.}. 
+	
+		Rovnaký princíp je uplatniteľný aj o pomyselnú úroveň nižšie, pri porovnávaní remízy a prehrávania o jeden gól, tzn. že tímy sa viac obávajú straty jedného bodu, ktorý by dostali ak by zápas skončil remízou, ako si cenia zisk dodatočného bodu. \parencite[s.~1768]{schneemann2017}
+		
+		Pravdaže v porovnaní s prácou napr. Bergera a Popa (\citeyear{berger2011}) treba brať do úvahy rozdielnosť povahy skúmaných športov a to najmä v súvislosti s množstvom bodov, ktoré počas jednotlivých zápasov padnú, nakoľko skórovanie v basketbale je, v porovnaní s futbalom, kde často rozhodne jediný gól, oveľa frekventovanejšie.
+				
+	\chapter{Charakteristika basketbalu}
+	
+	\chapter{Dataset a premenné}
+	Po stiahnutí dát bolo potrebné upraviť ich a prefiltrovať na základe nášho predmetu skúmania a potreby nášho modelu. Následné úpravy sa týkali všetkých datasetov, tzn. českého mužského a ženského basketbalu, amerického mužského a ženského basketbalu a európskeho mužského basketbalu.
+	
+	V prvom rade boli zo všetkých datasetov odstránené tie zápasy, ku ktorým neboli dostupné informácie o bodovom stave v polčase, keďže polčasový stav je pre nami zvolený model kľúčový. Taktiež boli vyradené všetky zápasy, ktoré mali remízový stav v polčase a tie, ktoré sa skončili remízou, nakoľko v našej práci sa nebudeme zaujímať o výsledky po základnej hracej dobe. Prehľad počtu vyfiltrovaných dát sa nachádza v Tabuľke \ref{table:prefiltrovane-data;}.
+	
+	Odstránené boli aj nepotrebné dáta už relevantných zápasov, ktoré nie sú v našej práci potrebné a podstatné, ako napr. dátum zápasu, výsledný bodový stav zápasu či bodový stav za tretiu a štvrtú tretinu.
+	
+	V ďalšom kroku bol stĺpec \textit{Výsledky} premenovaný na \texttt{WIN}. Tento stĺpec obsahoval hodnotu jedna pre výhru domáceho tímu a hodnotu dva pre jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty dva boli v tomto prípade prekódované na hodnoty nula.
+	
+	Ďalšími potrebnými dátami bol bodový rozdiel v polčase, predstavuje ho premenná \texttt{SCORE\_HALF}, ktorý však nie je priamo dostupný v stiahnutých dátach. Dal sa však odvodiť od hodnôt bodového skóre v polčase pre domáci a hosťujúci tím, ktorý však taktiež nebol priamo v dátach ale bolo možné ho  ľahko dopočítať a to na základe bodového stavu po každej štvrtine, ktoré dostupné boli. To znamená, že najprv boli sčítané body za prvú a druhú štvrtinu pre domáci a hosťujúci tím, tzn. \textit{GD1} + \textit{GD2} a \textit{GH1} a \textit{GH2}, z čoho vznikli body v polčase \textit{GDp} pre domáci tím a \textit{GHp} pre hosťujúci tím. Následne ich rozdielom boli získané dáta pre premennú \texttt{SCORE\_HALF}, ktoré majú absolútnu podobu. 
+	
+	Nutnosťou bolo vytvoriť z dát bodového rozdielu v polčase novú premennú \texttt{HALF}, v ktorej bola výhra domáceho tímu po polčase zakódovaná hodnotou nula a prehra hodnotou~jedna. 
+	
+	Poslednou úpravou dát bolo odčítanie hodnoty jedna od dát predstavujúcich výherný kurz na víťazstvo domáceho tímu.
+	
+		\begin{table}[t]
+			\catcode`\-=12
+			\centering	
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				
+				\multirow{2}{*}[-1em]{\makecell {\textbf{Basketbalová} \\ \textbf{liga}}}
+				& \multirow{2}{*}[-1em]{\textbf{Pohlavie}} 
+				& \multicolumn{4}{c|}{\textbf{Zápasy}} \\ \cline{3-6}
+				
+				
+				& & \makecell{\textbf{Pôvodný} \\ \textbf{počet s dátami}} &  \makecell{\textbf{Remíza} \\ \textbf{v polčase}} & \makecell{\textbf{Remíza} \\ \textbf{na konci}} & \textbf{Celkom} \\ \hline \hline
+				
+				\textbf{ČBF} & M & 1 371 & 38 & 46 & 1 287 \\ \hline
+				\textbf{ŽBL} & Ž & 556 & 17 & 5 & 534 \\ \hline \hline
+				
+				\textbf{NBA} & M & 15 979 & 569 & 1 009 & 14 401 \\ \hline
+				\textbf{WNBA}& Ž & 1 785 & 55 & 135 & 1 595 \\ \hline \hline
+				
+				\textbf{Euroliga} 
+				& M & 2 755 & 92 & 128 & 2 535 \\ \hline
+				
+				
+			\end{tabular}
+			\caption{Prehľad prefiltrovaných dát.}
+			\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+			\label{table:prefiltrovane-data;}
+		\end{table}
+
+\printbibliography[heading=bibintoc] %% Print the bibliography.
+\end{document}
