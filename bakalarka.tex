@@ -129,7 +129,18 @@
 git 	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
 
 	\chapter{Prepojenie športu a ekonómie}
-
+	Táto kapitola je krátkym pojednaním o spôsobe, akým sú prepojené dve, na prvý pohľad nijako nesúvisiace, oblasti, akými sú šport a ekonómia.
+	
+	Šport ako taký, či už na profesionálnej alebo amatérskej úrovni, v súčasnosti zaujal pomerne prominentné miesto v spoločnosti. V podobe zábavného biznisu má celosvetový dosah na milióny ľudí, ktorí sa nielen priamo zúčastňujú najrôznejších zápasov ale čítajú športové články a časopisy či si predplácajú športové televízne stanice a pravidelne sledujú dianie svojho obľúbeného športu. \parencite{conrad2011} Okrem toho sú ľudia denno-denne vyzývaní aby sa sami venovali nejakej športovej aktivite, ktorá je vyzdvihovaná pre svoje zdravotné benefity.
+	
+	Podľa Bootha (\citeyear{booth2009}) je kombináciou niekoľkých oblastí ekonomiky, počínajúc napríklad mikroekonomickými princípmi použitými v súvislosti so športovou organizáciou či priemyslom, ekonomikou práce a verejnými financiami. Okrem toho sa športová ekonomika môže zaoberať aj témami rasovej a rodovej diskriminácie alebo reálnym ekonomickým dopadom konania športových udalostí alebo stavby športových zariadení. 
+	
+	Pre ekonómiu ako vedu je vo všeobecnosti pomerne obtiažne a často krát dokonca nemožné  priamo testovať svoje teórie a hypotézy. Šport sa však vyznačuje jasne zadefinovanými pravidlami a generuje veľké množstvo dát, takže do určitej miery sa dá považovať za ideálne prostredie pre niektoré ekonomické skúmanie a testy.
+	
+	Práce, ktoré prepájajú ekonómiu a šport sa často krát zameriavajú na profesionálne tímové športy ako basketbal, hokej a americký futbal, keďže tie sú typické práve už spomenutým veľkým objemom najrôznejších kvantitatívnych dát, ktoré pozostávajú nielen z tímových charakteristík, ale aj charakteristík jednotlivcov v rámci súťaže. Ide napríklad o bodovanie, držanie lopty alebo počet odohraných minút v hre.
+	
+	Autorov zaoberajúcich sa športovou ekonómou je hneď niekoľko a ich práce sa líšia nielen poňatím spracovaných tém ale napríklad aj náročnosťou textu. Publikácia od Leedsa (\citeyear{leeds2018}) obsahuje mnoho konkrétnych príkladov aplikovania mikroekonómie a jej konceptov a teórií priamo na americké a medzinárodné športy, Késenne (\citeyear{kesenne2014}) sa vyznačuje analytickým poňatím teórie profesionálnych tímových športov a autori Sandy, Sloane a Rosentraub (\citeyear{sandy2004}) sa zameriavajú najmä na prípadové štúdie v súvislosti s Spojenými štátmi americkými, Kanadou, Európou a Austráliou. Odlišnou je publikácia Kupera a Syzmanskeho (\citeyear{kuper2009}), ktorá cez ekonómiu, ale aj štatistiku, psychológiu a teóriu hier odpovedá na mnohé zaujímavé otázky týkajúceho sa futbalu. Foer (\citeyear{foer2005}) vo svojej publikácii zas používa futbal ako prostriedok na vysvetlenie tém ako globalizácia, antisemitizmus či nacionalizmus.
+	
 	\chapter{Teória motivačného efektu}
 
 	\chapter{Literárny rešerš}
@@ -328,8 +339,10 @@ git 	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
 	
 		Po všetkých vyššie spomenutých úpravách sme mali na ekonometrickú analýzu vhodných dovedna viac ako dvadsať tisíc zápasov. Tabuľka \ref{table:prefiltrovane-data;} poskytuje prehľadný súhrn týchto zápasov, ich príslušnosť k jednotlivým ligám, či rámcové obdobie, z ktorého dané zápasy sú.
 		
-		Testovanie následne prebiehalo postupne v rámci jednotlivých líg, čo nám dalo možnosť nielen skúmať rozdiely medzi národnými ligami, ale napríklad aj rozdiely v motivácií v mužských a ženských ligách.
+		Tak ako bolo už niekoľko krát spomenuté, v našej práci porovnávame vždy domáci a hosťujúci tím. Pri každom zápase však skúmame iba jeden z týchto tímov, aby sme sa vyhli duplicite. V zásade je bezpredmetné, či by bol vybraný domáci alebo hosťujúci tím, nakoľko hociktorý jeden je zrkadlovým odrazom toho druhého. Výber v našom prípade je zhodný s výberom Bergera a Popa (\citeyear{berger2011}), ktorí sa rozhodli pre domáci tím~\footnote{Náhodný výber tímu by nebol v tomto prípade vhodnou metódou, keďže by mohol viesť k rozdielnym výsledkom v závislosti na náhodnosti výberu \parencite[s.~818]{berger2011}.}.
 		
+		Testovanie následne prebiehalo postupne v rámci jednotlivých líg, čo nám dalo možnosť nielen skúmať rozdiely medzi národnými ligami, ale napríklad aj rozdiely v motivácií v mužských a ženských ligách.
+					
 		Pri zostavovaní ekonometrického modelu sme vychádzali z už spomínanej štúdie Berger and Pope (\citeyear{berger2011}), ktorý bol však pozmenený v súvislosti s našim cieľom práce. Dáta boli spracované vo voľne prístupnom programe Studio R a mali podobu prierezových dát.
 		
 		Podoba nášho ekonometrického modelu je nasledovná:
@@ -342,7 +355,7 @@ git 	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
 		
 		Vysvetľujúcich premenných je dovedna 5. Prvou je umelá premenná \textit{HALF}, ktorá nám udáva informáciu o tom, či domáci tím v polčase prehrával alebo vyhrával. Ak vyhrával, premenná nadobúda hodnotu nula a ak prehrával, hodnota je jedna. Zdôvodnením je fakt, že v našej práci nás zaujímajú prípady zápasov, kedy domáci tím v polčase prehrával a predpokladáme, že malá bodová strata na súpera ho motivovala k lepšiemu výkonu a teda zdolaniu súpera a víťazstvu. 
 		
-		Ďalšou vysvetľujúcou premennou je premenná \textit{SCORE\_HALF}, ktorá udáva bodový rozdiel v polčase medzi dvomi tímami. Premenné \textit{SCORE\_HALF2} a \textit{SCORE\_HALF3} sú umocnením premennej \textit{SCORE\_HALF} na druhú a následne na tretiu. Dôvodom zahrnutia týchto dvoch premenných je tá, že pravdepodobnosť výhry nemusí byť lineárna v tom, koľko domáci tím prehráva v polčase a s druhým a tretím umocnením premennej \textit{SCORE\_HALF} je možné lepšie prispôsobiť naše dáta tomu, aby bolo možné vidieť skok regresnej diskontinuity,  za predpokladu, že sa tam nachádza.
+		Ďalšou vysvetľujúcou premennou je premenná \textit{SCORE\_HALF}, ktorá udáva bodový rozdiel v polčase medzi dvomi tímami. Premenné \textit{SCORE\_HALF2} a \textit{SCORE\_HALF3} sú umocnením premennej \textit{SCORE\_HALF} na druhú a následne na tretiu. Dôvodom zahrnutia týchto dvoch premenných je, že pravdepodobnosť výhry nemusí byť lineárna v tom, koľko domáci tím prehráva v polčase a s druhým a tretím umocnením premennej \textit{SCORE\_HALF} je možné lepšie prispôsobiť naše dáta tomu, aby bolo možné vidieť skok regresnej diskontinuity,  za predpokladu, že sa tam nachádza.
 		
 		\textit{BETTING\_RATE} je poslednou vysvetľujúcou premennou, ktorá by mala reprezentovať, ako ovplyvní model to, či je domáci tím favoritom. Iba pre pripomenutie, čím vyššia je premenná, tým vyšší je kurz na víťazstvo domáceho tímu a tím menším favoritom je. Platí teda, že čím nižší kurz, tým je tím väčším favoritom a naopak. Odčítanie hodnoty jedna od kurzu na víťazstvo domáceho tímu nie je nutnosťou, avšak v tejto podobe nám dáva informáciu o čistom zisku z jednotky meny, napr. z jednej koruny a následná interpretácia je relatívne jednoduchšia.
 		
