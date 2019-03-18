@@ -124,9 +124,24 @@
 	\chapter*{Úvod}
 	\addcontentsline{toc}{chapter}{Úvod}
 	
-	V ďalšom kroku bol stĺpec \textit{Výsledky} premenovaný na 	\texttt{WIN}. Tento stĺpec obsahoval 1 pre výhru domáceho tímu a 2 pre jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty 2 boli prekódované na hodnoty 0. \parencite{merritt2014}
+	V bakalárskej práci „Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov“ sa zameriavame na skúmanie športových dát, ktoré predstavujú vhodné laboratórium pre štúdium motivačných efektov.
 	
-git 	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
+	Naša práca primárne vychádza zo štúdie Bergera a Popa (2011), ktorí na základe dát z NBA ukazujú, že tesná prehra v priebehu hry, špecificky v polčase, má silný motivačný efekt. 
+	
+	V rámci našej práce hľadáme odpovede na otázky \textit{Sú výsledky Berger a Popa robustné? Funguje motivačný efekt rovnako pre mužov ako aj pre ženy? Je rozdiel vo výsledkoch medzi favoritmi a tými ostatnými?} Cieľom našej práce je na dátach z viac ako dvadsať jedna tisíc basketbalových zápasov a piatich rôznych líg overiť robustnosť tohto ich záveru. Okrem toho máme za cieľ preskúmať ako sa líši efekt priebežného výsledku medzi pohlaviami, tj. či existuje ako pri mužoch tak aj pri ženách, po prípade na ktoré pohlavie vplýva silnejšie. Naše očakávanie je, že efekt by mal byť zhruba rovnaký pri mužoch aj pri ženách. Posledným dielčim cieľom tejto práce je porovnať vplyv motivačného efektu pre skupinu favoritov a skupinu tých druhých, nie silne favorizovaných. Dôvodom pre toto skúmanie je overenie nášho predpokladu, že motivačný efekt bude ťahaný práve favoritmi.
+	
+	\textbf{Prvá kapitola je krátkym úvodom do problematiky...}
+	
+	\textbf{Druhá kapitola už uvádza čitateľa priamo do problematiky fiškálnych inštitúcií. Vymedzuje tento pojem prostredníctvom jeho štyroch komponentov (fiškálne pravidlá, pravidlá pre zostavovanie rozpočtu, pravidlá transparentnosti, nezávislé inštitúcie) a uvádza nielen tri úrovne fiškálnych inštitúcii ale aj pravidlá, ktorými sú tvorené, limity, ktoré sa ich týkajú, prípadné sankcie, ktoré ich môžu postihnúť a organizácie, ktoré majú nad nimi dozor}.
+	
+	V poradí tretia kapitola je literárnym rešeršom teórie motivačného efektu. Okrem štúdie Bergera a Popa obsahuje ďalšie 4 práce, ktoré sa venujú tejto tematike. Kapitola sa zameriava vecné zhrnutie stanovených cieľov, zvolených metód riešenia, využitých nástrojov a dosiahnutých výsledkov. 
+	
+	Štvrtá kapitola je krátkym úvodom do problematiky basketbalu ako športu, v rámci ktorej sú v stručnosti popísané základné pravidlá basketbalu a následne je charakterizovaných päť basketbalových líg, ktorých dáta sú v práci využité.
+	
+	Piata kapitola začína popisom hlavnej metódy spracovania dát, regresnú diskontinuitu. Ďalej špecifikuje dataset s ktorým sa v práci pracuje, tzn. koľko a akých zápasov obsahuje, aký bol postup spracovania a prispôsobenia dát. Tretia časť kapitoly definuje použitý ekonometrický model a jeho vysvetľovanú a vysvetľované premenné.
+	
+	Posledná kapitola, šiesta, obsahuje spracovanie dát a popis získaných výsledkov. V závere sú zhrnuté získané poznatky a zodpovedané nastolené otázky z úvodu práce.
+	
 
 	\chapter{Prepojenie športu a ekonómie}
 	Táto kapitola je krátkym pojednaním o spôsobe, akým sú prepojené dve, na prvý pohľad nijako nesúvisiace, oblasti, akými sú šport a ekonómia.
@@ -292,9 +307,9 @@ git 	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
 		Pravdaže v porovnaní s prácou napr. Bergera a Popa (\citeyear{berger2011}) treba brať do úvahy rozdielnosť povahy skúmaných športov a to najmä v súvislosti s množstvom bodov, ktoré počas jednotlivých zápasov padnú, nakoľko skórovanie v basketbale je, v porovnaní s futbalom, kde často rozhodne jediný gól, oveľa frekventovanejšie.
 				
 	\chapter{Basketbal ako šport}
-	Cieľom tejto kapitoly nie je ísť do podrobnosti v súvislosti s či už pravidlami alebo históriou jednotlivých líg, ale aspoň v stručnosti definovať basketbal ako šport, keďže naša práca sa týka práve tohto športu, a jednotlivé basketbalové ligy, s ktorých dátami pracujeme.
+	Cieľom tejto kapitoly nie je ísť do podrobností v súvislosti s či už pravidlami alebo históriou jednotlivých líg, ale aspoň v stručnosti definovať basketbal ako šport, keďže naša práca sa týka práve tohto športu, a jednotlivé basketbalové ligy, s ktorých dátami pracujeme.
 	
-	Vo všeobecnosti je basketbal kolektívny šport desiatich hráčov rozdelených do dvoch súperiacich tímov. Cieľom štyridsaťosem minútovej, resp. štyridsať minútovej hry rozdelenej na štyri štvrtiny je získať viac bodov ako súper. Body sú udeľované za trafenie lopty do basketbalového koša druhého tímu. Počet bodov za jednotlivé skórovania sa líši podľa ich povahy a miesta, z ktorého bol kôš trafený. Kôš hodený z dvojbodového územia je ohodnotený dvomi bodmi, kôš zo vzdialenejšieho územia je za tri body a trestný hod je za jeden bod. Zápasy pritom nemôžu skončiť remízou, podobne ako je to napríklad pri tenise, a v prípade, že sa o víťazovi zápasu nerozhodne v základnej hracej dobe, nastavuje sa toľko päť minútových predĺžení, koľko je potrebné.
+	Basketbal je kolektívny šport desiatich hráčov rozdelených do dvoch súperiacich tímov. Cieľom štyridsaťosem minútovej, resp. štyridsať minútovej hry rozdelenej na štyri štvrtiny je získať viac bodov ako súper. Body sú udeľované za trafenie lopty do basketbalového koša druhého tímu. Počet bodov za jednotlivé skórovania sa líši podľa ich povahy a miesta, z ktorého bol kôš trafený. Kôš hodený z dvojbodového územia je ohodnotený dvomi bodmi, kôš zo vzdialenejšieho územia je za tri body a trestný hod je za jeden bod. Zápasy pritom nemôžu skončiť remízou, podobne ako je to napríklad pri tenise, a v prípade, že sa o víťazovi zápasu nerozhodne v základnej hracej dobe, nastavuje sa toľko päť minútových predĺžení, koľko je potrebné.
 	
 		\section{Charakteristika basketbalových líg}
 		V našej práci budeme pracovať so zápasmi z piatich basketbalových líg a to českou Národnou basketbalovou ligou a Ženskou basketbalovou ligou , americkou Národnou basketbalovou asociáciou a Ženskou národnou basketbalovou asociáciou a Euroligou v basketbale mužov.
@@ -356,9 +371,9 @@ git 	SAASDFADGFDAS ADSF ASDF A \parencite{berger2011}
 		
 		V prvom rade boli zo všetkých datasetov odstránené tie zápasy, ku ktorým neboli dostupné informácie o bodovom stave v polčase, keďže polčasový stav je pre nami zvolený model kľúčový. Taktiež boli vyradené všetky zápasy ktoré sa skončili remízou, nakoľko v našej práci sa nebudeme zaujímať o výsledky po základnej hracej dobe. Prehľad počtu vyfiltrovaných dát sa nachádza v Tabuľke \ref{table:prefiltrovane-data;}.
 		
-		Následne boli odstránené nepotrebné dáta relevantných zápasov, ktoré nie sú v našej práci potrebné a podstatné, ako napr. dátum zápasu, výsledný bodový stav zápasu či bodový stav za tretiu a štvrtú štvrtinu.
+		Následne boli odstránené nepotrebné dáta relevantných zápasov, ktoré nie sú pre našu prácu potrebné a podstatné, ako napr. dátum zápasu, výsledný bodový stav zápasu či bodový stav za tretiu a štvrtú štvrtinu.
 		
-		Dáta obsahovali stĺpec s informáciou o víťazovi zápasu, hodnota jedna značila výhru domáceho tímu, hodnota dva jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty dva boli v tomto prípade prekódované na hodnoty nula. Tak nám vznikla premenná \textit{WIN}.
+		Dáta obsahovali informáciu o víťazovi zápasu, hodnota jedna značila výhru domáceho tímu, hodnota dva jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty dva boli v tomto prípade prekódované na hodnoty nula. Tak nám vznikla premenná \textit{WIN}.
 		
 		Ďalej bolo potrebné vytvoriť premennú predstavujúcu bodový rozdiel medzi domácim a hosťujúcim tímom v polčase - premennú \textit{SCORE\_HALF}. Vytvoriť preto, lebo takáto informácia nebola priamo dostupná v stiahnutých dátach. Bolo možné ju však odvodiť od  bodového skóre domáceho a hosťujúceho tímu v polčase, ktoré však tiež nebolo priamo v dátach. Na základe bodového stavu po prvej a druhej štvrtine, ktorý dostupný bol, sa však dalo ľahko dopočítať. To znamená, že najprv boli sčítané body za prvú a druhú štvrtinu pre domáci a hosťujúci tím, z čoho vznikli body v polčase pre domáci tím a pre hosťujúci tím. Následne ich rozdielom boli získané dáta pre premennú \textit{SCORE\_HALF}. 
 		
