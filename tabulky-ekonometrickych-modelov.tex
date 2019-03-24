@@ -1,0 +1,130 @@
+%% TABUĽKY EKONOMETRICKÝCH MODELOV (1) až (4)
+	\newcolumntype{x}[1]{>{\centering\hspace{0pt}}p{#1}}
+	\begin{table}[h]
+		\catcode`\-=12
+		\centering 
+		\bgroup
+		\def\arraystretch{1.5}
+		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
+			\hline
+			
+			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
+			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
+			
+			\multirow{2}{*}{\textit{HALF}} & 0,342 & 0,046 & 0,405 & 0,198 \tabularnewline
+			& (0,244) & (0,305) & (0,259) & (0,319) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,203*** & 0,150*** & 0,191*** & 0,153*** \tabularnewline
+			& (0,017) & (0,034) & (0,019) & (0,035) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & -0,003* & --- & -0,002 \tabularnewline
+			& & (0,001) & & (0,001) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,0003* & --- & 0,0002 \tabularnewline
+			& & (0,0002) & & (0,0002) \tabularnewline
+			\hline
+
+			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -0,555*** & -0,547*** \tabularnewline
+			& & & (0,071) & (0,071) \tabularnewline
+			\hline
+			
+			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			\hline
+			
+			\textit{Pozorovania} & 1 325 & 1 325 & 1 325 & 1 325 \tabularnewline
+			\hline
+		\end{tabular}
+		\egroup
+		\caption{Vplyv prehrávania v polčase na výhru v NBL dátach}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{table:vplyvNBL}
+	\end{table}	
+		
+	\begin{table}[h]
+		\catcode`\-=12
+		\centering 
+		\bgroup
+		\def\arraystretch{1.5}
+		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
+			\hline
+			
+			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
+			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
+			
+			\multirow{2}{*}{\textit{HALF}} & -0,801** & -0,917** & -0,,754* & -0,799* \tabularnewline
+			& (0,393) & (0,462) & (0,422) & (0,484) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,182*** & 0,163*** & 0,166*** & 0,159*** \tabularnewline
+			& (0,028) & (0,048) & (0,031) & (0,050) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & -0,0003* & --- & 0,001 \tabularnewline
+			& & (0,002) & & (0,002) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,00008 & --- & 0,00002 \tabularnewline
+			& & (0,0002) & & (0,0002) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -0,364*** & -0,369*** \tabularnewline
+			& & & (0,079) & (0,080) \tabularnewline
+			\hline
+			
+			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			\hline
+			
+			\textit{Pozorovania} & 551 & 551 & 551 & 551 \tabularnewline
+			\hline
+		\end{tabular}
+		\egroup
+		\caption{Vplyv prehrávania v polčase na výhru v ŽBL dátach}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{table:vplyvZBL}
+	\end{table}	
+
+	\begin{table}[h]
+		\catcode`\-=12
+		\centering 
+		\bgroup
+		\def\arraystretch{1.5}
+		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
+			\hline
+			
+			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
+			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
+			
+			\multirow{2}{*}{\textit{HALF}} & 0,345*** & 0,279*** & 0,352*** & 0,301*** \tabularnewline
+			& (0,066) & (0,079) & (0,069) & (0,082) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,170*** & 0,160*** & 0,160*** & 0,153*** \tabularnewline
+			& (0,005) & (0,008) & (0,005) & (0,008) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & -0,00004 & --- & 0,00001 \tabularnewline
+			& & (0,0003) & & (0,0003) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,00004 & --- & 0,00003 \tabularnewline
+			& & (0,00003) & & (0,00003) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -1,118*** & -1,117*** \tabularnewline
+			& & & (0,038) & (0,038) \tabularnewline
+			\hline
+			
+			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			\hline
+			
+			\textit{Pozorovania} & 14 970 & 14 970 & 14 970 & 14 970 \tabularnewline
+			\hline
+		\end{tabular}
+		\egroup
+		\caption{Vplyv prehrávania v polčase na výhru v NBA dátach}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{table:vpylvNBAja}	
+	\end{table}		
