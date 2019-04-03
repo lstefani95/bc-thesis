@@ -58,12 +58,9 @@
     },
     title              = { \makecell[l]{Motivačný efekt priebežného výsledku: \\ Robustnosť evidencie zo športových zápasov}},
     TeXtitle           = Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov,
-    keywords           = {keyword1, keyword2, ...},
-    TeXkeywords        = {keyword1, keyword2, \ldots},
-    abstract           = {This is the abstract of my thesis, which
-                          can
-
-                          span multiple paragraphs.},
+    keywords           = {basketbal, Berger a Pope, motivačný efekt, regresná diskontinuita},
+    TeXkeywords        = {basketbal, Berger a Pope, motivačný efekt, regresná diskontinuita},
+    abstract           = {Predmetom bakalárskej práce "Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov" je skúmať motivačný efekt tesnej prehry v priebehu hry na dátach z basketbalových zápasov. Úvodná časť práce je literárnou rešeršou odbornej literatúry súvisiacej s predmetom práce. Následne v práci overujeme robustnosť motivačného efektu bytia pozadu, skúmame prípadnú rozdielnosť medzi mužským a ženským basketbalom a testujeme možnosť, že je efekt ovplyvňovaný veľkosťou favorizovania tímu a to za pomoci regresnej diskontinuity.},
     thanks             = {These are the acknowledgements for my
                           thesis, which can
 
@@ -78,8 +75,8 @@
     %% English thesis.
     titleEn            = { \makecell[l]{Incentive effect of intermediate result: \\ Robustness check of sport matches evidence}},
     TeXtitleEn         = Incentive effect of intermediate result: Robustness check of sport matches evidence,
-    keywordsEn         = {keyword1, keyword2, ...},
-    TeXkeywordsEn      = {keyword1, keyword2, \ldots},
+    keywordsEn         = {basketball, Berger and Pope, motivation effect, regression discontinuity design},
+    TeXkeywordsEn      = {basketball, Berger and Pope, motivation effect, regression discontinuity design},
     abstractEn         = {This is the English abstract of my
                           thesis, which can
 
@@ -117,7 +114,7 @@
 \usepackage[noabbrev,capitalise]{cleveref}
 \usepackage{textcomp}
 \usepackage[figureposition=top]{caption}
-%%\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.5}
 
 
 \begin{document}
@@ -136,7 +133,7 @@
 	
 	Z toho vychádzajúc, táto bakalárska práca hľadá odpovede na otázky \textit{Sú výsledky štúdie Berger a Popa robustné? Funguje motivačný efekt rovnako pre mužov ako aj pre ženy? Je rozdiel v motivačnom efekte medzi favoritmi a tými ostatnými?} 
 	
-	Prvá kapitola práce začína krátkym úvodom do problematiky prepojenia športu a ekonómie a následne v stručnosti uvádza čitateľa do problematiky  motivačného efektu. Kapitola obsahuje aj literárny rešerš teórie motivačného efektu, ktorí tvoria okrem štúdie Bergera a Popa ďalšie štyri práce venujúce sa obdobnej tematike. Literárny rešerš sa zameriava na vecné zhrnutie stanovených cieľov, zvolených metód riešenia, využitých nástrojov a dosiahnutých výsledkov. 
+	Prvá kapitola práce začína krátkym úvodom do problematiky prepojenia športu a ekonómie a následne v stručnosti uvádza čitateľa do problematiky  motivačného efektu. Kapitola obsahuje aj literárnu rešerš teórie motivačného efektu, ktorí tvoria okrem štúdie Bergera a Popa ďalšie štyri práce venujúce sa obdobnej tematike. Literárna rešerš sa zameriava na vecné zhrnutie stanovených cieľov, zvolených metód riešenia, využitých nástrojov a dosiahnutých výsledkov. 
 	
 	Druhá kapitola je krátkym úvodom do problematiky basketbalu ako športu, v rámci ktorej sú v stručnosti popísané základné pravidlá basketbalu a následne je charakterizovaných päť basketbalových líg, ktorých dáta sú v práci využité.
 	
@@ -249,7 +246,7 @@
 		
 		Logit modely vytvorené na overenie tohto predpokladu sa svojou štruktúrou zhodovali s už skôr použitými modelmi až na ten rozdiel, že vysvetľovanou premennou nebola výhra celého zápasu ale v jednom prípade výhra v tretej a v druhom prípade vo štvrtej štvrtine. To znamená, že vysvetľované premenné indikovali to, či mal domáci tím viac bodov na konci danej štvrtiny ako súper. 
 		
-		Znamienka koeficientov pre premennú prehrávania v polčase sú v oboch prípadoch, pre tretiu aj štvrtú štvrtinu, kladné. Prehrávanie v polčase tým pádom zvýšilo pravdepodobnosť výhry v jednotlivých štvrtinách, avšak väčšie a štatisticky významné sú iba koeficienty pre tretiu tretinu, čím sa predpoklad autorov potvrdil. 			
+		Znamienka koeficientov pre premennú prehrávania v polčase sú v oboch prípadoch, pre tretiu aj štvrtú štvrtinu, kladné. Prehrávanie v polčase tým pádom zvýšilo pravdepodobnosť výhry v jednotlivých štvrtinách, avšak väčšie a štatisticky významné sú iba koeficienty pre tretiu tretinu, čím sa predpoklad autorov potvrdil. \parencite[s.~822]{berger2011}		
 			
 		Vyzdvihnutia hodné je zaujímavé upozornenie autorov, že motivačný efekt polčasového prehrávania je približne polovičnej veľkosti ako všeobecne populárny efekt domácej výhody.
 
@@ -740,13 +737,9 @@
 	
 	Očakávanie je, že motivačný efekt je väčší a silnejší pre väčšieho favorita a teda pre tím s nižším kurzom. Ak teda vyjde koeficient interakčnej premennej \textit{BETTING\_RATE * HALF} štatisticky významný  a záporný, naše očakávanie sa potvrdí. 
 	
-\textbf{Grafy xxx a xxx sú ilustračnými grafmi pre interpretáciu kladného alebo záporného koeficientu interakčnej premennej. Na osi x je kurz domáceho tímu, čím ju kurz nižší tým je väčší favorit a čím je vyšší tým je väčší outsider. Na osi y je koeficient premennej HALF, ktorá je meraná, čiže veľkosť motivačného efektu.}
-
-\textbf{Keď vyjde koeficient kladný, priamka bude ako v grafe xxx rastúca, čo znamená, že domáce tímy s väčším kurzom majú väčší koeficient. V tomto prípade je efekt väčší u outsiderov. Ak však vyjde koeficient záporný, viď graf xxx, znamená to, že motivačný efekt bytia pozadu v polčase je väčší u favoritov.}
+	Pomyselné grafy vhodné na interpretáciu kladného a záporného koeficientu interakčnej premennej pozostávajú z osi x, na ktorej sa nachádza kurz domáceho tímu. Čím ju kurz nižší, tým ide o väčšieho favorita a čím je vyšší, tým je väčší outsider. Na osi y je koeficient meranej premennej \textit{HALF}, čiže veľkosť motivačného efektu. Keď vyjde koeficient kladný, priamka v grafe bude rastúca, čo znamená, že domáce tímy s väčším kurzom majú väčší koeficient. V tomto prípade je efekt väčší u outsiderov. Ak však vyjde koeficient záporný, znamená to, že motivačný efekt bytia pozadu v polčase je väčší u favoritov.
 	
-\textbf{V prípade, že táto premenná vyjde štatisticky nevýznamná, efekt nebude závisieť na veľkosti kurzu a tom, akým veľkým favoritom je tím.}
-	
-\textbf{ILUSTRAČNÉ GRAFY xxx A xxx}
+	V prípade, že premenná \textit{BETTING\_RATE * HALF} vyjde štatisticky nevýznamná, efekt nebude závisieť na veľkosti kurzu a tom, akým veľkým favoritom je tím.
 	
 	Spracované boli iba dva modely a to (5) a (6), čo sú vlastne modely (3) a (4) z predchádzajúcich časti \ref{sec:overenie} a \ref{sec:porovnanie} s pridaním interakčnej premennej \textit{BETTING\_RATE * HALF}.  Modely (1) a (2) neboli použité, keďže neobsahujú premennú kurzu, o ktorú sa interakčná premenná kontroluje.
 	
