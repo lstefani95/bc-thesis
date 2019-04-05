@@ -110,7 +110,10 @@
 \usepackage[noabbrev,capitalise]{cleveref}
 \usepackage{textcomp}
 \usepackage[figureposition=top]{caption}
-\renewcommand{\baselinestretch}{1.5}
+%%\renewcommand{\baselinestretch}{1.5}		% na celý dokument
+%%\setlength\extrarowheight{-7pt}		% k tabuľkám
+\usepackage{setspace}
+\setstretch{1.5}
 
 
 \begin{document}
@@ -233,7 +236,7 @@
 			\egroup
 			\caption{Vplyv prehrávania v polčase na výhru v NBA dátach}
 			\vskip\abovecaptionskip\emph{Zdroj: <<\cite{berger2011} a vlastné spracovanie>>}
-			\vskip\abovecaptionskip\emph{Pozn.: V tabuľke sú uvedené hodnoty medzného efektu koeficientov jednotlivých premenných a v zátvorkách je ich smerodatná chyba z použitia logit modelu.}
+			\vskip\abovecaptionskip\emph{Pozn.: V tabuľke sú uvedené hodnoty medzného efektu koeficientov jednotlivých premenných a v zátvorkách je ich smerodatná chyba. Použitý logit model.}
 			\label{table:vplyvNBA1}
 		\end{table}	
 	
@@ -256,6 +259,7 @@
 			\catcode`\-=12
 			\centering	
 			\bgroup
+			\renewcommand{\arraystretch}{1} 
 			\def\arraystretch{1.3}
 			\begin{tabular}{|l|c|c|c|c|c|}
 				\hline
@@ -478,11 +482,11 @@
 		\end{table}
 	
 	\chapter{Hlavné modely a výsledky}
-	Táto bakalárska práca si stanovila nasledovné tri ciele: overiť robustnosť záveru štúdie Bergera a Popa (2011), porovnať výsledky mužského a ženského basketbalu a porovnať výsledky favoritov a tých ostatných a zistiť prípadné rozdiely v súvislosti s existenciou a pôsobením motivačného efektu. Na dosiahnutie týchto cieľov bolo skonštruovaných niekoľko alternatív základného modelu bližšie popísaného v časti \ref{sec:pouzitymodel}. Výsledkom týchto modelov sú grafy \ref{fig:ZBL4}, \ref{fig:NBA4} a \ref{fig:NBL4}, \ref{fig:WNBA4} a \ref{fig:EURO4} a tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvNBAja} a \ref{table:vplyvWNBA} a \ref{table:vplyvEURO} pre všetkých päť líg.
+	Táto bakalárska práca si stanovila nasledovné tri ciele: overiť robustnosť záveru štúdie Bergera a Popa (2011), porovnať výsledky mužského a ženského basketbalu a porovnať výsledky favoritov a tých ostatných a zistiť prípadné rozdiely v súvislosti s existenciou a pôsobením motivačného efektu. Na dosiahnutie týchto cieľov bolo skonštruovaných niekoľko alternatív základného modelu bližšie popísaného v časti \ref{sec:pouzitymodel}. Výsledkom týchto modelov sú grafy \ref{fig:ZBL4}, \ref{fig:NBA4} a \ref{fig:NBL4}, \ref{fig:WNBA4}, \ref{fig:EURO4} a tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO} a \ref{table:vplyvNBAja} pre všetkých päť líg.
 	
 	Zostrojené grafy sú grafmi regresnej diskontinuity a predstavujú percento vyhraných zápasov domáceho tímu v závislosti na bodovom rozdiele medzi domácim a hosťujúcim tímom v polčase. Modrá čiara zobrazuje lineárny tvar dát, čierna vodorovná čiara v hodnote nula bodového rozdielu predstavuje miesto, v ktorom je očakávaná diskontinuita v prípade existencie motivačného efektu.
 
-	Tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO} sú výsledkom ekonometrického modelu, logitu, a zobrazujú vplyv prehrávania v polčase na celkovú výhru v zápase pre všetkých päť basketbalových líg v poradí NBL, ŽBL, NBA, WNBA a EUROLIGA. Vysvetľovanou premennou je premenná \textit{WIN}. V prvom stĺpci zľava sú jednotlivé vysvetľujúce premenné – \textit{HALF}, \textit{SCORE\_HALF}, \textit{SCORE\_HALF2}, \textit{SCORE\_HALF3} a \textit{BETTING\_RATE}. 
+	Tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO} a \ref{table:vplyvNBAja} sú výsledkom ekonometrického modelu, logitu, a zobrazujú vplyv prehrávania v polčase na celkovú výhru v zápase pre všetkých päť basketbalových líg v poradí NBL, WNBA, EUROLIGA, ŽBL a NBA,. Vysvetľovanou premennou je premenná \textit{WIN}. V prvom stĺpci zľava sú jednotlivé vysvetľujúce premenné – \textit{HALF}, \textit{SCORE\_HALF}, \textit{SCORE\_HALF2}, \textit{SCORE\_HALF3} a \textit{BETTING\_RATE}. 
 
 	Stĺpce s označením (1), (2), (3) a (4) sú štyrmi rôznymi alternáciami základného modelu. Modely v stĺpcoch (1) a (3) obsahujú premennú \textit{SCORE\_HALF} iba v jej lineárnej podobe, zatiaľ čo modely (2) a (4) obsahujú aj jej kvadratickú a kubickú podobu. Ďalej modely (1) a (2) neobsahujú žiadnu ďalšiu kontrolnú premennú, modely (3) a (4) však zahŕňajú aj premennú \textit{BETTING\_RATE}. 
 	
@@ -492,13 +496,11 @@
 	\label{sec:overenie}
 	Aby sme mohli vyhlásiť výsledky Bergera a Popa (\citeyear{berger2011}) za robustné, je potrebné, aby sa v dátach prejavila diskontinuita a to v podobe skoku v bode nulového bodového rozdielu v polčase. Takýto skok je veľmi dobre viditeľný v prípade ŽBL a existuje aj v NBA dátach. Dáta ostatných troch líg takouto diskontinuitou nedisponujú, viď grafy \ref{fig:NBL4}, \ref{fig:WNBA4}, \ref{fig:EURO4}. 
 	
-	Pri pohľade na tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO}, ktoré ukazujú vplyv prehrávania v polčase na výhru nás zaujímajú najmä dve veci a to v súvislosti s premennou \textit{HALF} – štatistická významnosť a znamienko koeficientu. Informácie o jednotlivých ligách sú zhrnuté v tabuľke \ref{table:prehladznamienok}. 
+	Pri pohľade na tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO} a \ref{table:vplyvNBAja}, ktoré ukazujú vplyv prehrávania v polčase na výhru nás zaujímajú najmä dve veci a to v súvislosti s premennou \textit{HALF} – štatistická významnosť a znamienko koeficientu. 
 	
 	Štatistická významnosť modelu vypovedá o tom, že s nejakou rozumnou mierou pravdepodobnosti, typicky 5 \% mierou istoty pri 95 \% intervale spoľahlivosti, efekt nie je nulový a existuje. To znamená, že akonáhle je model štatisticky nevýznamný, efekt väčšej motivácie pri bytí pozadu nie je.
 	
 	Znamienko koeficientu, kladné alebo záporné, premennej \textit{HALF}, hovorí o smere vplyvu motivačného efektu. Ak je znamienko kladné, byť trochu pozadu v polčase znamená väčšiu pravdepodobnosť výhry, zatiaľ čo záporné znamienko naznačuje opak, a to, že byť pozadu v polčase znamená väčšiu pravdepodobnosť prehry.
-	
-	Tabuľka \ref{table:prehladznamienok} sumarizuje štatistickú významnosť a znamienko premennej \textit{HALF}. V prvom stĺpci sú zoradené skúmané basketbalové ligy, v druhom stĺpci sa nachádza vyjadrený výskyt štatistickej významnosti. Písmena A značí, že premenná je štatisticky významná, písmeno N, že nie je. Tretí stĺpec obsahuje symbol podľa toho, či je premenná kladná alebo záporná, kombinácia symbolu plus a mínus predstavuje nejednoznačnosť, kedy časť modelov vyšla kladná a časť záporná. V takomto prípade však boli hodnoty ako také malé a je možné ich brať s prihliadnutím ako nulové.
 	
 	\begin{table}[h]
 		\catcode`\-=12
@@ -527,15 +529,16 @@
 		\label{table:prehladznamienok}
 	\end{table}	
 	
-	Vo všeobecnosti je možné skonštatovať, že vo všetkých piatich modeloch platí, že čím viac sú tímy v polčase popredu, tým viac sa zvyšuje ich šanca na výhru v zápase a naopak, čím väčšia je ich strata, tým je táto šanca nižšia. To je vidieť nielen na grafoch ale aj v tabuľkách, v ktorých kladné znamienka premennej \textit{SCORE\_HALF} hovoria, že čím je vyšší bodový rozdiel v polčase, tým sa zvyšuje pravdepodobnosť výhry.
+	Tabuľka \ref{table:prehladznamienok} sumarizuje štatistickú významnosť a znamienko premennej \textit{HALF} pre modely všetkých piatich basketbalových líg. V prvom stĺpci sú zoradené skúmané basketbalové ligy, v druhom stĺpci sa nachádza vyjadrený výskyt štatistickej významnosti. Písmena A značí, že premenná je štatisticky významná, písmeno N, že nie je. Tretí stĺpec obsahuje symbol podľa toho, či je premenná kladná alebo záporná, kombinácia symbolu plus a mínus predstavuje nejednoznačnosť, kedy časť modelov vyšla kladná a časť záporná. V takomto prípade však boli hodnoty ako také malé a je možné ich brať s prihliadnutím ako nulové.
+	
+	Vo všeobecnosti je možné skonštatovať, že vo všetkých piatich modeloch platí, že čím viac sú tímy v polčase popredu, tým viac sa zvyšuje ich šanca na výhru v zápase a naopak, čím väčšia je ich strata, tým je táto šanca nižšia. To je vidieť nielen na grafoch ale aj v tabuľkách, v ktorých kladné znamienka premennej \textit{SCORE\_HALF} hovoria, že čím je vyšší bodový rozdiel v polčase, tým sa zvyšuje pravdepodobnosť výhry, záporné symbolizujú opačný efekt.
 	
 	Záporné znamienka koeficientov premennej \textit{BETTING\_RATE} zas vypovedajú o tom, že čím je vyšší kurz na basketbalový tím, tým je nižšia pravdepodobnosť výhry v zápase. Platí, že čím má tím vyšší basketbalový kurz, tím menším favoritom v zápase je.
 	
-	Tvrdenie, že motivačný efekt bytia pozadu sa objavuje v dvoch z piatich líg, odvodené z grafického spracovania dát, sa potvrdilo aj vo výsledkoch spracovaných modelov viď tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO}. Štatistická nevýznamnosť premennej \textit{HALF} sa prejavila vo všetkých štyroch modeloch líg NBL, WNBA a EUROLIGA. Nestalo sa, že by aspoň jeden z modelov vyšiel štatisticky významný. Motivačný efekt preto v týchto ligách nie je prítomný. Naopak, modely líg ŽBL a NBA vyšli všetky štatisticky významné, čo znamená, že v nich sa hľadaný motivačný efekt prejavil. To, akým spôsobom je bližšie rozobraté v nasledujúcej časti \ref{sec:porovnanie}.
-
 	\begin{table}[h]
 		\catcode`\-=12
 		\centering 
+		\footnotesize
 		\bgroup
 		\def\arraystretch{1.5}
 		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
@@ -574,11 +577,118 @@
 		\caption{Vplyv prehrávania v polčase na výhru v NBL dátach}
 		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
 		\label{table:vplyvNBL}
-	\end{table}	
+	\end{table}
 	
-	\begin{table}[p]
+	\begin{table}[h]
 		\catcode`\-=12
 		\centering 
+		\footnotesize
+		\bgroup
+		\def\arraystretch{1.5}
+		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
+			\hline
+			
+			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
+			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
+			
+			\multirow{2}{*}{\textit{HALF}} & 0,023 & -0,162 & 0,123 & -0,012 \tabularnewline
+			& (0,204) & (0,250) & (0,211) & (0,255) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,175*** & 0,147*** & 0,175*** & 0,156*** \tabularnewline
+			& (0,015) & (0,027) & (0,016) & (0,027) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & 0,001 & --- & 0,002 \tabularnewline
+			& & (0,001) & & (0,001) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,0001 & --- & 0,00009 \tabularnewline
+			& & (0,0001) & & (0,0001) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -0,640*** & -0,646*** \tabularnewline
+			& & & (0,086) & (0,087) \tabularnewline
+			\hline
+			
+			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			\hline
+			
+			\textit{Pozorovania} & 1 650 & 1 650 & 1 650 & 1 650 \tabularnewline
+			\hline
+		\end{tabular}
+		\egroup
+		\caption{Vplyv prehrávania v polčase na výhru vo WNBA dátach}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{table:vplyvWNBA}	
+	\end{table}				
+	
+	\begin{table}[H]
+		\catcode`\-=12
+		\centering 
+		\footnotesize
+		\bgroup
+		\def\arraystretch{1.5}
+		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
+			\hline
+			
+			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
+			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
+			
+			\multirow{2}{*}{\textit{HALF}} & 0,089 & -0,112 & 0,025 & -0,152 \tabularnewline
+			& (0,164) & (0,201) & (0,173) & (0,212) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,186*** & 0,154*** & 0,166*** & 0,138*** \tabularnewline
+			& (0,013) & (0,023) & (0,013) & (0,023) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & -0,00002 & --- & 0,0001 \tabularnewline
+			& & (0,0009) & & (0,0009) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,0002 & --- & 0,0001 \tabularnewline
+			& & (0,0001) & & (0,0001) \tabularnewline
+			\hline
+			
+			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -1,019*** & -1,014*** \tabularnewline
+			& & & (0,084) & (0,085) \tabularnewline
+			\hline
+			
+			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			\hline
+			
+			\textit{Pozorovania} & 2 627 & 2 627 & 2 627 & 2 627 \tabularnewline
+			\hline
+		\end{tabular}
+		\egroup
+		\caption{Vplyv prehrávania v polčase na výhru v EUROLIGA dátach}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{table:vplyvEURO}	
+	\end{table}	
+	
+	Tvrdenie, že motivačný efekt bytia pozadu sa objavuje v dvoch z piatich líg, odvodené z grafického spracovania dát, sa potvrdilo aj vo výsledkoch spracovaných modelov viď tabuľky \ref{table:vplyvNBL} až \ref{table:vplyvEURO}. Štatistická nevýznamnosť premennej \textit{HALF} sa prejavila vo všetkých štyroch modeloch líg NBL, WNBA a EUROLIGA. Nestalo sa, že by aspoň jeden z modelov vyšiel štatisticky významný. Motivačný efekt preto v týchto ligách nie je prítomný.
+	
+	Naopak, modely líg ŽBL a NBA vyšli všetky štatisticky významné, čo znamená, že v nich sa hľadaný motivačný efekt prejavil. To, akým spôsobom je bližšie rozobraté v nasledujúcej časti \ref{sec:porovnanie}.
+
+	\section{Porovnanie mužského a ženského basketbalu}
+	\label{sec:porovnanie}
+	Druhým cieľom tejto práce je porovnať mužský a ženský basketbal v súvislosti s existenciou a silou motivačného efektu bytia pozadu. Náš dataset obsahoval tri mužské ligy, NBL, NBA a EUROLIGU, a dve ženské ligy, ŽBL a WNBA. Keďže štatisticky významná nám vyšla jedna mužská a jedna ženská liga, porovnávané budú tieto dve – ŽBL a NBA.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{./grafy/ZBL4.png}
+		\caption{Percento vyhraných zápasov domáceho tímu na základe bodového rozdielu pre dáta zo ŽBL}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{fig:ZBL4}
+	\end{figure}
+	
+	Ženská liga ŽBL mala spomedzi všetkých líg najmenšiu vzorku pozorovaní, zhruba dvadsaťsedem krát menšiu ako NBA liga. Z grafu \ref{fig:ZBL4} je ľahko čitateľná informácia, že čím viac tímy ŽBL vyhrávajú, tým je vyššia pravdepodobnosť výhry v celom zápase – napríklad tímy, ktoré vedú v polčase o 6 bodov vyhrávajú viac ako 80 \% času.
+	
+	\begin{table}[h]
+		\catcode`\-=12
+		\centering 
+		\footnotesize
 		\bgroup
 		\def\arraystretch{1.5}
 		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
@@ -618,10 +728,48 @@
 		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
 		\label{table:vplyvZBL}
 	\end{table}	
+
+	Štatisticky významné vyšli všetky štyri spracované modely čo znamená, že motivačný efekt je v týchto dátach prítomný. Túto skutočnosť potvrdzuje aj pohľad na graf, kde je vidieť silná diskontinuita v okolí nuly. Znamienko premennej \textit{HALF} v tabuľke \ref{table:vplyvZBL} je však opačné ako v štúdií Bergera a Popa (\citeyear{berger2011}) – z toho sa dá vyvodiť, že akonáhle je tím pozadu v polčase, pravdepodobnosť výhry celého zápasu je nižšia. V prípade, že tím prehráva o jeden bod, vyhrá zápas zhruba 40 \% času, zatiaľ čo ak tím z tejto ligy vyhráva o jeden bod, pravdepodobnosť výhry sa zvyšuje až na približne 67 \%.
+
+	Inými slovami sa dá povedať, že tím, ktorý prehráva v polčase o jeden bod vyhrá zápas menej pravdepodobne ako jeho súper. Tímom, ktoré prehrávajú v polčase sa, po prepočte koeficientov premennej \textit{HALF}, znižuje pravdepodobnosť výhry o 7,6 až 10,3 \%, viď tabuľka \ref{table:prehladvplyvu}. To znamená, že byť pozadu v ŽBL nijako nezvyšuje motiváciu ani šancu na výhru, práve naopak, znižuje ju.
 	
-	\begin{table}[p]
+	\begin{table}[H]
 		\catcode`\-=12
 		\centering 
+		\bgroup
+		\def\arraystretch{1.5}
+		\begin{tabular}{|l||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
+			\hline
+			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
+			
+			\textit{HALF} pre ŽBL & -0,09051 & -0,1039 & -0,0767 & -0,08148 \tabularnewline
+			\hline 
+			
+			\textit{HALF} pre NBA & 0,0581  & 0,0471 & 0,05436 & 0,04649 \tabularnewline
+			\hline
+		\end{tabular}
+		\egroup
+		\caption{Percentuálny vplyv premennej \textit{HALF} pre ŽBL a NBA modely}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{table:prehladvplyvu}
+	\end{table}	
+	
+	Mužskou ligou, ktorú porovnávame so ŽBL, je americká NBA, ktorej dataset bol najväčší spomedzi všetkých piatich líg. Rovnako ako ŽBL, aj modely NBA vyšli všetky štatisticky významné a platí aj priama úmera medzi výškou vedenia v polčase a pravdepodobnosťou výhry v zápase, aj keď z grafu \ref{fig:NBA4} vidno, že tímy, ktoré vedú v polčase o šesť bodov vyhrávajú o niečo málo menej často ako ženy, 75 \% času.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{./grafy/NBA4.png}
+		\caption{Percento vyhraných zápasov domáceho tímu na základe bodového rozdielu pre dáta z NBA}
+		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
+		\label{fig:NBA4}
+	\end{figure}
+	
+	V tabuľke \ref{table:vplyvNBAja} má premenná \textit{HALF} kladné znamienko – akonáhle je tím pozadu v polčase, tak je pravdepodobnosť výhry v zápase vyššia. Skok v okolí nuly, viď graf, nie je natoľko výrazný ako v prípade ŽBL ale existuje. Keď tím prehráva o jeden bod, vyhrá zápas 58 \% času, zatiaľ čo ak tím vyhráva o jeden bod, zápas vyhrá 53 \% času.	
+		
+	\begin{table}[H]
+		\catcode`\-=12
+		\centering
+		\footnotesize
 		\bgroup
 		\def\arraystretch{1.5}
 		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
@@ -659,62 +807,10 @@
 		\egroup
 		\caption{Vplyv prehrávania v polčase na výhru v NBA dátach}
 		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\label{table:vpylvNBAja}	
-	\end{table}		
-
-	
-	\section{Porovnanie mužského a ženského basketbalu}
-	\label{sec:porovnanie}
-	Druhým cieľom tejto práce je porovnať mužský a ženský basketbal v súvislosti s existenciou a silou motivačného efektu bytia pozadu. Náš dataset obsahoval tri mužské ligy, NBL, NBA a EUROLIGU, a dve ženské ligy, ŽBL a WNBA. Keďže štatisticky významná nám vyšla jedna mužská a jedna ženská liga, porovnávané budú tieto dve – ŽBL a NBA.
-	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.8\textwidth]{./grafy/ZBL4.png}
-		\caption{Percento vyhraných zápasov domáceho tímu na základe bodového rozdielu pre dáta zo ŽBL}
-		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\label{fig:ZBL4}
-	\end{figure}
-	
-	Ženská liga ŽBL mala spomedzi všetkých líg najmenšiu vzorku pozorovaní, zhruba dvadsaťsedem krát menšiu ako NBA liga. Z grafu \ref{fig:ZBL4} je ľahko čitateľná informácia, že čím viac tímy ŽBL vyhrávajú, tým je vyššia pravdepodobnosť výhry v celom zápase – napríklad tímy, ktoré vedú v polčase o 6 bodov vyhrávajú viac ako 80 \% času.
-	
-	Štatisticky významné vyšli všetky štyri spracované modely čo znamená, že motivačný efekt je v týchto dátach prítomný. Túto skutočnosť potvrdzuje aj pohľad na graf, kde je vidieť silná diskontinuita v okolí nuly. Znamienko premennej \textit{HALF} v tabuľke \ref{table:vplyvZBL} je však opačné ako v štúdií Bergera a Popa (\citeyear{berger2011}) – z toho sa dá vyvodiť, že akonáhle je tím pozadu v polčase, pravdepodobnosť výhry celého zápasu je nižšia. V prípade, že tím prehráva o jeden bod, vyhrá zápas zhruba 40 \% času, zatiaľ čo ak tím z tejto ligy vyhráva o jeden bod, pravdepodobnosť výhry sa zvyšuje až na približne 67 \%.
-	
-	Inými slovami sa dá povedať, že tím, ktorý prehráva v polčase o jeden bod vyhrá zápas menej pravdepodobne ako jeho súper. Tímom, ktoré prehrávajú v polčase sa, po prepočte koeficientov premennej \textit{HALF}, znižuje pravdepodobnosť výhry o 7,6 až 10,3 \%, viď tabuľka \ref{table:prehladvplyvu}. To znamená, že byť pozadu v ŽBL nijako nezvyšuje motiváciu ani šancu na výhru, práve naopak, znižuje ju.
-
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.8\textwidth]{./grafy/NBA4.png}
-		\caption{Percento vyhraných zápasov domáceho tímu na základe bodového rozdielu pre dáta z NBA}
-		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\label{fig:NBA4}
-	\end{figure}	
-
-	Mužskou ligou, ktorú porovnávame so ŽBL, je americká NBA, ktorej dataset bol najväčší spomedzi všetkých piatich líg. Rovnako ako ŽBL, aj modely NBA vyšli všetky štatisticky významné a platí aj priama úmera medzi výškou vedenia v polčase a pravdepodobnosťou výhry v zápase, aj keď z grafu \ref{fig:NBA4} vidno, že tímy, ktoré vedú v polčase o šesť bodov vyhrávajú o niečo málo menej často ako ženy, 75 \% času.
-
-	V tabuľke \ref{table:vplyvNBAja} má premenná \textit{HALF} kladné znamienko – akonáhle je tím pozadu v polčase, tak je pravdepodobnosť výhry v zápase vyššia. Skok v okolí nuly, viď graf, nie je natoľko výrazný ako v prípade ŽBL ale existuje. Keď tím prehráva o jeden bod, vyhrá zápas 58 \% času, zatiaľ čo ak tím vyhráva o jeden bod, zápas vyhrá 53 \% času.
-	
-	V tomto datasete sa potvrdilo, že byť trochu pozadu zvyšuje motiváciu a tým aj šancu na výhru. V percentuálnom zobrazení sa tímom, ktoré prehrávajú v polčase, po prepočte koeficientov premennej \textit{HALF}, zvyšuje pravdepodobnosť výhry o 4,6 až 5,8 percent, viď tabuľka \ref{table:prehladvplyvu}.
-	
-	\begin{table}[h]
-		\catcode`\-=12
-		\centering 
-		\bgroup
-		\def\arraystretch{1.5}
-		\begin{tabular}{|l||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
-			\hline
-			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
-
-			\textit{HALF} pre ŽBL & -0,09051 & -0,1039 & -0,0767 & -0,08148 \tabularnewline
-			\hline 
-			
-			\textit{HALF} pre NBA & 0,0581  & 0,0471 & 0,05436 & 0,04649 \tabularnewline
-			\hline
-		\end{tabular}
-		\egroup
-		\caption{Percentuálny vplyv premennej \textit{HALF} pre ŽBL a NBA modely}
-		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\label{table:prehladvplyvu}
+		\label{table:vplyvNBAja}	
 	\end{table}	
+
+	V tomto datasete sa potvrdilo, že byť trochu pozadu zvyšuje motiváciu a tým aj šancu na výhru. V percentuálnom zobrazení sa tímom, ktoré prehrávajú v polčase, po prepočte koeficientov premennej \textit{HALF}, zvyšuje pravdepodobnosť výhry o 4,6 až 5,8 percent, viď tabuľka \ref{table:prehladvplyvu}.
 	
 	\section{Porovnanie favoritov a tých ostatných}
 	Tretím cieľom je porovnať výsledky favoritov a tých ostatných a zistiť prípadný rozdiel medzi týmito dvomi skupinami.
@@ -738,14 +834,11 @@
 	
 	V prípade, že premenná \textit{BETTING\_RATE * HALF} vyjde štatisticky nevýznamná, efekt nebude závisieť na veľkosti kurzu a tom, akým veľkým favoritom je tím.
 	
-	Spracované boli iba dva modely a to (5) a (6), čo sú vlastne modely (3) a (4) z predchádzajúcich časti \ref{sec:overenie} a \ref{sec:porovnanie} s pridaním interakčnej premennej \textit{BETTING\_RATE * HALF}.  Modely (1) a (2) neboli použité, keďže neobsahujú premennú kurzu, o ktorú sa interakčná premenná kontroluje.
-	
-	Tabuľka \ref{table:vplyvfvo} a graf \ref{fig:NBA_fvo} hovoria, že motivačný efekt bytia pozadu v polčase na nemení na základe kurzu a teda toho, akým favoritom je tím. Koeficient interakčnej premennej ako v modeli (3) tak aj (4) vyšiel s malou kladnou hodnotou, ktorá však nie je štatisticky významná. Veľkosť favorita tým pádom nemá vplyv na veľkosť motivačného efektu a očakávanie sa nepotvrdilo.
-	
 	\newcommand{\twosizeofcolumn}{12em}
 	\begin{table}[h]
 		\catcode`\-=12
-		\centering 
+		\centering
+		\footnotesize 
 		\bgroup
 		\def\arraystretch{1.5}
 		\begin{tabular}{|r||x{\twosizeofcolumn}x{\twosizeofcolumn}|}
@@ -791,9 +884,13 @@
 		\label{table:vplyvfvo}	
 	\end{table}	
 	
+	Spracované boli iba dva modely a to (5) a (6), čo sú vlastne modely (3) a (4) z predchádzajúcich časti \ref{sec:overenie} a \ref{sec:porovnanie} s pridaním interakčnej premennej \textit{BETTING\_RATE * HALF}.  Modely (1) a (2) neboli použité, keďže neobsahujú premennú kurzu, o ktorú sa interakčná premenná kontroluje.
+	
+	Tabuľka \ref{table:vplyvfvo} a graf \ref{fig:NBA_fvo} hovoria, že motivačný efekt bytia pozadu v polčase na nemení na základe kurzu a teda toho, akým favoritom je tím. Koeficient interakčnej premennej ako v modeli (3) tak aj (4) vyšiel s malou kladnou hodnotou, ktorá však nie je štatisticky významná. Veľkosť favorita tým pádom nemá vplyv na veľkosť motivačného efektu a očakávanie sa nepotvrdilo.
+	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1\textwidth]{./grafy/NBA_fvo.png}
+		\includegraphics[width=0.8\textwidth]{./grafy/NBA_fvo.png}
 		\caption{Percento vyhraných zápasov domáceho tímu na základe bodového rozdielu pre dáta z NBA – favoriti VS ostatní}
 		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
 		\label{fig:NBA_fvo}
@@ -804,6 +901,13 @@
 
 \clearpage
 \printbibliography[heading=bibintoc] %% Print the bibliography.
+
+\thispagestyle{empty}
+\clearpage
+
+\listoffigures
+
+\listoftables
 
 \appendix{} %% Start the appendices.
 \counterwithin{figure}{chapter}
@@ -851,7 +955,8 @@
 	\newcolumntype{x}[1]{>{\centering\hspace{0pt}}p{#1}}
 	\begin{table}[!ht]
 		\catcode`\-=12
-		\centering 
+		\centering
+		\footnotesize 
 		\bgroup
 		\def\arraystretch{1.5}
 		\begin{tabular}{|l||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
@@ -893,97 +998,7 @@
 		\label{table:vplyvNCAA}
 	\end{table}	
 
-	\begin{table}[!ht]
-		\catcode`\-=12
-		\centering 
-		\bgroup
-		\def\arraystretch{1.5}
-		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
-			\hline
-			
-			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
-			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
-			
-			\multirow{2}{*}{\textit{HALF}} & 0,023 & -0,162 & 0,123 & -0,012 \tabularnewline
-			& (0,204) & (0,250) & (0,211) & (0,255) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,175*** & 0,147*** & 0,175*** & 0,156*** \tabularnewline
-			& (0,015) & (0,027) & (0,016) & (0,027) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & 0,001 & --- & 0,002 \tabularnewline
-			& & (0,001) & & (0,001) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,0001 & --- & 0,00009 \tabularnewline
-			& & (0,0001) & & (0,0001) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -0,640*** & -0,646*** \tabularnewline
-			& & & (0,086) & (0,087) \tabularnewline
-			\hline
-			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
-			\hline
-			
-			\textit{Pozorovania} & 1 650 & 1 650 & 1 650 & 1 650 \tabularnewline
-			\hline
-		\end{tabular}
-		\egroup
-		\caption{Vplyv prehrávania v polčase na výhru vo WNBA dátach}
-		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\vskip\abovecaptionskip\emph{Pozn.: V tabuľke sú uvedené odhadu koeficientov logit modelu a v zátvorkách sa nachádzajú smerodatné chyby.}
-		\label{table:vplyvWNBA}	
-	\end{table}				
-	
-	\begin{table}[!ht]
-		\catcode`\-=12
-		\centering 
-		\bgroup
-		\def\arraystretch{1.5}
-		\begin{tabular}{|r||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
-			\hline
-			
-			\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ WIN_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
-			& \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \tabularnewline \hline \hline
-			
-			\multirow{2}{*}{\textit{HALF}} & 0,089 & -0,112 & 0,025 & -0,152 \tabularnewline
-			& (0,164) & (0,201) & (0,173) & (0,212) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{SCORE\_HALF}} & 0,186*** & 0,154*** & 0,166*** & 0,138*** \tabularnewline
-			& (0,013) & (0,023) & (0,013) & (0,023) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{SCORE\_HALF2}} & --- & -0,00002 & --- & 0,0001 \tabularnewline
-			& & (0,0009) & & (0,0009) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{SCORE\_HALF3}} & --- & 0,0002 & --- & 0,0001 \tabularnewline
-			& & (0,0001) & & (0,0001) \tabularnewline
-			\hline
-			
-			\multirow{2}{*}{\textit{BETTING\_RATE}} & --- & --- & -1,019*** & -1,014*** \tabularnewline
-			& & & (0,084) & (0,085) \tabularnewline
-			\hline
-			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
-			\hline
-			
-			\textit{Pozorovania} & 2 627 & 2 627 & 2 627 & 2 627 \tabularnewline
-			\hline
-		\end{tabular}
-		\egroup
-		\caption{Vplyv prehrávania v polčase na výhru v EUROLIGA dátach}
-		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\vskip\abovecaptionskip\emph{Pozn.: V tabuľke sú uvedené odhadu koeficientov logit modelu a v zátvorkách sa nachádzajú smerodatné chyby.}
-		\label{table:vplyvEURO}	
-	\end{table}	
-
 %%\thispagestyle{empty}
-\listoffigures
-\listoftables
 %%\clearpage
 %%\pagenumbering{arabic}
 
