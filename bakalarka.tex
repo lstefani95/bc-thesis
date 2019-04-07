@@ -80,6 +80,7 @@
 }
 \usepackage{makeidx}      %% The `makeidx` package contains
 \makeindex                %% helper commands for index typesetting.
+
 %% These additional packages are used within the document:
 \usepackage{paralist} %% Compact list environments
 \usepackage{amsmath}  %% Mathematics
@@ -103,17 +104,14 @@
 \counterwithout{table}{chapter}  % Flat numbering of tables.
 \counterwithout{figure}{chapter} % Flat numbering of figures.
 
-
 \usepackage{makecell}
 \usepackage{multirow}
 \usepackage{hyperref}
 \usepackage[noabbrev,capitalise]{cleveref}
 \usepackage{textcomp}
 \usepackage[figureposition=top]{caption}
-%%\renewcommand{\baselinestretch}{1.5}		% na celý dokument
-%%\setlength\extrarowheight{-7pt}		% k tabuľkám
 \usepackage{setspace}
-\setstretch{1.5}
+	\setstretch{1.5} %% Nastavenie riadkovania.
 
 
 \begin{document}
