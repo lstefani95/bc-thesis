@@ -60,7 +60,7 @@
 \gdef\thesis@slovak@abstractTitle{Anotácie}
 \thesis@def@extra{advisorSkGenitiv}
 \gdef\thesis@slovak@declaration{Vyhlasujem, že som
-  \thesis@lower{slovak@typeName@akuzativ} \thesis@title{} spracoval%
+  \thesis@lower{slovak@typeName@akuzativ} \thesis@TeXtitle{} spracoval%
   \thesis@slovak@gender@koncovka\ samostatne pod vedením
   \thesis@extra@advisorSkGenitiv\
   a~uvied\ifthesis@woman la\else iol\fi\ v~nej všetky

@@ -3,7 +3,7 @@
            %% digital version of a document. Replace with `printed`
            %% to enable the default options for the printed version
            %% of a document.
-  oneside, %% This option enables double-sided typesetting. Use at
+  twoside, %% This option enables double-sided typesetting. Use at
            %% least 120 g/m² paper to prevent show-through. Replace
            %% with `oneside` to use one-sided typesetting; use only
            %% if you don’t have access to a double-sided printer,
@@ -58,8 +58,8 @@
     },
     title              = { \makecell[l]{Motivačný efekt priebežného výsledku: \\ Robustnosť evidencie zo športových zápasov}},
     TeXtitle           = Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov,
-    keywords           = {basketbal, Berger a Pope, motivačný efekt, regresná diskontinuita},
-    TeXkeywords        = {basketbal, Berger a Pope, motivačný efekt, regresná diskontinuita},
+    keywords           = {basketbal, Berger a Pope, motivačný efekt, model regresnej diskontinuity},
+    TeXkeywords        = {basketbal, Berger a Pope, motivačný efekt, model regresnej diskontinuity},
     abstract           = {Bakalárska práca "Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov" sa zameriava na motivačný efekt prehry v priebehu zápasu. Na dátach z piatich basketbalových líg je overovaná robustnosť výsledkov štúdie Bergera a Popa (2011), ktorá tvrdí, že prehrávanie v polčase môže viesť k výhre. V súvislosti s motivačným efektom v práci rozoberáme rozdielnosť medzi mužským a ženským basketbalom a pričom taktiež zohľadňujeme rolu favorita.},
     thanks             = {Týmto by som sa chcela poďakovať Ing. Rostislavovi Staňekovi, Phd. za vedenie práce, pomoc pri jej vypracovávaní a cenné postrehy, pripomienky a rady. 
     	
@@ -68,7 +68,7 @@
     %% Uncomment the following line (by removing the % symbol at
     %% the beginning) and replace `assignment.pdf` with the
     %% filename of your scanned thesis assignment.
-    % assignment    = assignment.pdf,
+    assignment    = zadanie.pdf,
     %% The following keys are only useful, when you're using a
     %% locale other than English. You can safely omit them in an
     %% English thesis.
@@ -567,7 +567,7 @@
 			& & & (0,071) & (0,071) \tabularnewline
 			\hline
 			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			$ Pseudo-R^{2} $ & 0,356 & 0,360 & 0,413 & 0,415 \tabularnewline
 			\hline
 			
 			\textit{Pozorovania} & 1 325 & 1 325 & 1 325 & 1 325 \tabularnewline
@@ -611,7 +611,7 @@
 			& & & (0,086) & (0,087) \tabularnewline
 			\hline
 			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			$ Pseudo-R^{2} $ & 0,286 & 0,287 & 0,316 & 0,318 \tabularnewline
 			\hline
 			
 			\textit{Pozorovania} & 1 650 & 1 650 & 1 650 & 1 650 \tabularnewline
@@ -655,7 +655,7 @@
 			& & & (0,084) & (0,085) \tabularnewline
 			\hline
 			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			$ Pseudo-R^{2} $ & 0,290 & 0,291 & 0,346 & 0,346 \tabularnewline
 			\hline
 			
 			\textit{Pozorovania} & 2 627 & 2 627 & 2 627 & 2 627 \tabularnewline
@@ -717,7 +717,7 @@
 			& & & (0,079) & (0,080) \tabularnewline
 			\hline
 			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			$ Pseudo-R^{2} $ & 0,484 & 0,484 & 0,530 & 0,530 \tabularnewline
 			\hline
 			
 			\textit{Pozorovania} & 551 & 551 & 551 & 551 \tabularnewline
@@ -798,7 +798,7 @@
 			& & & (0,038) & (0,038) \tabularnewline
 			\hline
 			
-			$ Pseudo-R^{2} $ &  &  &  &  \tabularnewline
+			$ Pseudo-R^{2} $ & 0,247 & 0,247 & 0,299 & 0,299 \tabularnewline
 			\hline
 			
 			\textit{Pozorovania} & 14 970 & 14 970 & 14 970 & 14 970 \tabularnewline
@@ -871,7 +871,7 @@
 			& (0,052) & (0,052) \tabularnewline
 			\hline
 			
-			$ Pseudo-R^{2} $ &  &  \tabularnewline
+			$ Pseudo-R^{2} $ & 0,299 & 0,299 \tabularnewline
 			\hline
 			
 			\textit{Pozorovania} & 14 970 & 14 970 \tabularnewline
@@ -880,7 +880,7 @@
 		\egroup
 		\caption{Vplyv prehrávania v polčase na výhru – favoriti VS ostatní}
 		\vskip\abovecaptionskip\emph{Zdroj: <<vlastné spracovanie>>}
-		\vskip\abovecaptionskip\emph{Pozn.: V tabuľke sú uvedené odhadu koeficientov logit modelu a v zátvorkách sa nachádzajú smerodatné chyby.}
+		\vskip\abovecaptionskip\emph{Pozn.: V tabuľke sú uvedené odhady koeficientov logit modelu a v zátvorkách sa nachádzajú smerodatné chyby.}
 		\label{table:vplyvfvo}	
 	\end{table}	
 	
@@ -906,7 +906,7 @@
 	
 	Analýza dát, ktoré boli k dispozícií, bola uskutočnená prostredníctvom modelu regresnej diskontinuity a logit modelu v programe Studio R.
 	
-	Na základe preskúmania dát z piatich basketbalových líg vzišiel záver, že motivačný efekt priebežného výsledku nie je robustný. Rovnaký motivačný efekt ako zistili Berger a Pope sa ukázal iba v jednej lige, ide pritom len o potvrdenie tej istej ligy - NBA. Výsledky pre ligu NBA hovoria, že byť trochu pozadu zvyšuje motiváciu a tým aj šancu na výhru v zápase v priemere až o 5,15 \%. V prípade, že tím prehráva o jeden bod, vyhrá zápas 58 \% času, zatiaľ čo približne 53 \% času ak o jeden bod vyhráva.
+	Na základe preskúmania dát z piatich basketbalových líg vzišiel záver, že motivačný efekt priebežného výsledku nie je robustný. Rovnaký motivačný efekt ako zistili Berger a Pope sa ukázal iba v jednej lige, ide pritom len o potvrdenie tej istej ligy – NBA. Výsledky pre ligu NBA hovoria, že byť trochu pozadu zvyšuje motiváciu a tým aj šancu na výhru v zápase v priemere až o 5,15 \%. V prípade, že tím prehráva o jeden bod, vyhrá zápas 58 \% času, zatiaľ čo približne 53 \% času ak o jeden bod vyhráva.
 	
 	Pri analýze dát v súvislosti s rozdielom medzi pohlaviami bol zistený rozdiel. Zastúpením mužského basketbalu bola NBA, v ktorej, ako už bolo spomenuté, motivačný efekt existuje. Reprezentantom ženského basketbalu bola ŽBL, v ktorej sa síce motivačný efekt prejavil, avšak mal opačný smer pôsobenia. Namiesto toho, aby zvýhodňoval tímy tesne prehrávajúce, ako tomu je v prípade mužov, väčšiu pravdepodobnosť výhry majú tímy tesne vyhrávajúce.
 	
@@ -914,20 +914,37 @@
 	
 	Možno teda konštatovať, že ak sa motivačný efekt prejaví, tak skôr u mužov ako u žien. Ak sa však vyskytne v ženskom basketbale, má opačný efekt. Rozdiel v pôsobení efektu medzi favoritmi a tými ostatnými nebol pozorovaný.
 	
-	
-\clearpage
+
+
 \printbibliography[heading=bibintoc] %% Print the bibliography.
 
-\thispagestyle{empty}
-\clearpage
-
 \listoffigures
+\addcontentsline{toc}{chapter}{Zoznam grafov}	
+
 
 \listoftables
+\addcontentsline{toc}{chapter}{Zoznam tabuliek}
+
+
+	\chapter*{Zoznam skratiek}
+	\addcontentsline{toc}{chapter}{Zoznam skratiek}
+	{\renewcommand\labelitemi{}
+	\begin{itemize}
+	\item \textbf{EURO} ~~~ Euroliga
+	\item \textbf{GPA} ~~~ Grade Point Average
+	\item \textbf{NBA} ~~~ National Basketball Association
+	\item \textbf{NBL} ~~~ Národná basketbalová liga
+	\item \textbf{NMSC} ~~~ National Merit Scholarship Corporation
+	\item \textbf{PSAT} ~~~ Preliminary SAT
+	\item \textbf{RDD} ~~~ Regression Discontinuity Design
+	\item \textbf{WNBA} ~~~ Women's National Basketball Association
+	\item \textbf{ŽBL} ~~~ Ženská basketbalová liga
+	\end{itemize}}
 
 \appendix{} %% Start the appendices.
 \counterwithin{figure}{chapter}
 \counterwithin{table}{chapter}
+
 \chapter{Príloha grafov}
 	
 	\renewcommand{\figurename}{Graf}
