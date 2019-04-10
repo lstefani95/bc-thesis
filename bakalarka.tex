@@ -112,6 +112,7 @@
 \usepackage[figureposition=top]{caption}
 \usepackage{setspace}
 	\setstretch{1.5} %% Nastavenie riadkovania.
+\usepackage{xcolor}
 
 
 \begin{document}
@@ -123,60 +124,65 @@
 	\chapter*{Úvod}
 	\addcontentsline{toc}{chapter}{Úvod}
 	
-	Bakalárská práca „Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov“ sa zameriava na skúmanie športových dát, ktoré predstavujú vhodné laboratórium pre štúdium motivačných efektov.
+	Bakalárská práca  s názvom \textit{Motivačný efekt priebežného výsledku: Robustnosť evidencie zo športových zápasov} sa zameriava na skúmanie športových dát, ktoré predstavujú vhodné laboratórium pre štúdium motivačných efektov.
 	
-	Práca vychádza primárne zo štúdie Bergera a Popa (2011), ktorí na základe dát z NBA ukazujú, že tesná prehra v priebehu hry, špecificky v polčase, má silný motivačný efekt. 
+	Práca vychádza primárne zo štúdie Bergera a Popa (2011), ktorí na základe dát z basketbalových zápasov ukazujú, že tesná prehra v priebehu hry, špecificky v polčase, má silný motivačný efekt. 
 	
-	Cieľom tejto práce je na dátach z viac ako dvadsaťjedentisíc  basketbalových zápasov a piatich rôznych líg overiť robustnosť tohto ich záveru. Okrem toho je cieľom preskúmať ako sa líši efekt priebežného výsledku medzi pohlaviami, tj. či existuje v súvislosti s ako mužskými súťažami tak aj tými ženskými, po prípade na ktoré pohlavie vplýva silnejšie. Očakávanie je, že efekt by mal byť zhruba rovnaký pre obe pohlavia. Posledným cieľom tejto práce je porovnať vplyv motivačného efektu pre skupinu favoritov a skupinu tých druhých, nie tak silne favorizovaných tímov. Dôvodom pre toto skúmanie je overenie predpokladu, že motivačný efekt bude ťahaný práve favoritmi.
+	Cieľom tejto práce je na dátach z viac ako dvadsaťjedentisíc  basketbalových zápasov a piatich rôznych líg overiť robustnosť tohto ich záveru. Okrem toho je cieľom preskúmať ako sa líši efekt priebežného výsledku medzi pohlaviami, tj. či sa vyskytuje v mužských a aj ženských súťažiach, prípadne na ktoré pohlavie vplýva silnejšie. Očakávanie je, že efekt by mal byť zhruba rovnaký pre obe pohlavia. Posledným cieľom tejto práce je porovnať vplyv motivačného efektu pre skupinu favoritov a skupinu tých druhých, nie tak silne favorizovaných tímov. Motiváciou tohto skúmania je overenie predpokladu, že motivačný efekt bude výraznejší pre favoritov.
 	
-	Z toho vychádzajúc, táto bakalárska práca hľadá odpovede na otázky \textit{Sú výsledky štúdie Berger a Popa robustné? Funguje motivačný efekt rovnako pre mužov ako aj pre ženy? Je rozdiel v motivačnom efekte medzi favoritmi a tými ostatnými?} 
+	Z toho vychádzajúc, táto bakalárska práca hľadá odpovede na otázky: \textit{Sú výsledky štúdie Berger a Popa robustné? Funguje motivačný efekt rovnako pre mužov ako aj pre ženy? Je rozdiel vo výskyte motivačného efekte medzi favoritmi a tými ostatnými?} 
 	
-	Prvá kapitola práce začína krátkym úvodom do problematiky prepojenia športu a ekonómie a následne v stručnosti uvádza čitateľa do problematiky  motivačného efektu. Kapitola obsahuje aj literárnu rešerš teórie motivačného efektu, ktorí tvoria okrem štúdie Bergera a Popa ďalšie štyri práce venujúce sa obdobnej tematike. Literárna rešerš sa zameriava na vecné zhrnutie stanovených cieľov, zvolených metód riešenia, využitých nástrojov a dosiahnutých výsledkov. 
+	Práca začína krátkym úvodom do problematiky prepojenia športu a ekonómie a následne v stručnosti uvádza čitateľa do problematiky  motivačného efektu. Literárnu rešerš teórie motivačného efektu tvoria okrem štúdie Bergera a Popa ďalšie \colorbox{yellow}{štyri} práce venujúce sa obdobnej tematike. Rešerš sa zameriava na vecné zhrnutie stanovených cieľov, zvolených metód riešenia, využitých nástrojov a dosiahnutých výsledkov. 
 	
-	Druhá kapitola je krátkym úvodom do problematiky basketbalu ako športu, v rámci ktorej sú v stručnosti popísané základné pravidlá basketbalu a následne je charakterizovaných päť basketbalových líg, ktorých dáta sú v práci využité.
+	Pre účely zistenia odpovedí na otázky tejto práce bolo nutné spracovať dáta metódou regresnej diskontinuity. Pôvodný dataset pozorovaní bol podrobený úprave a prefiltrovaniu aby vyhovoval potrebám zostrojeného ekonometrického modelu, jeho vysvetľovanej a vysvetľujúcim premenným.
 	
-	Tretia kapitola začína popisom hlavnej metódy spracovania dát, regresnej diskontinuity. Ďalej je v kapitole špecifikovaný dataset, s ktorým sa v práci narába, tzn. koľko a akých zápasov obsahuje, aký bol postup spracovania a prispôsobenia dát. Tretia časť kapitoly definuje použitý ekonometrický model a jeho vysvetľovanú a vysvetľované premenné.
-	
-	Posledná kapitola, štvrtá, obsahuje spracovanie dát a popis získaných výsledkov. V závere sú zhrnuté získané poznatky a zodpovedané nastolené otázky z úvodu práce.
+	Posledná kapitola obsahuje spracovanie dát a popis získaných výsledkov. V závere sú zhrnuté získané poznatky a zodpovedané nastolené otázky z úvodu práce.
 	
 
 	\chapter{Prepojenie športu a ekonómie}
-	Prvá kapitola práce je krátkym pojednaním o spôsobe, akým sú prepojené dve, na prvý pohľad nijako nesúvisiace, oblasti, akými sú šport a ekonómia.
+	Táto kapitola predstavuje rôzne prepojenia dvoch na prvý pohľad nijako nesúvisiacich oblastí, akými sú šport a ekonómia.
 	
-	Šport ako taký, či už na profesionálnej alebo amatérskej úrovni, v súčasnosti zaujal pomerne prominentné miesto v spoločnosti. V podobe zábavného biznisu má celosvetový dosah na milióny ľudí, ktorí sa nielen priamo zúčastňujú najrôznejších zápasov ale aj čítajú športové články a časopisy či si predplácajú športové televízne stanice a pravidelne sledujú dianie svojho obľúbeného športu. \parencite{conrad2011} Okrem toho sú ľudia denno-denne vyzývaní aby sa sami venovali nejakej športovej aktivite, ktorá je vyzdvihovaná pre svoje zdravotné benefity.
+	Šport ako taký, či už na profesionálnej alebo amatérskej úrovni, v súčasnosti zaujal pomerne prominentné miesto v spoločnosti. V podobe zábavného priemyslu má celosvetový dosah na milióny ľudí, ktorí sa nielen priamo zúčastňujú športových podujatí ale aj čítajú športové články a časopisy, či si predplácajú športové televízne stanice a pravidelne sledujú dianie svojho obľúbeného športu. \parencite{conrad2011} Okrem toho sú ľudia denno-denne vyzývaní aby sa sami venovali nejakej športovej aktivite, ktorá je vyzdvihovaná pre svoje zdravotné benefity.
 	
-	Športová ekonómia je podľa Bootha (\citeyear[s.~377]{booth2009}) kombináciou niekoľkých oblastí ekonómie, počínajúc napríklad mikroekonomickými princípmi použitými v súvislosti so športovou organizáciou či priemyslom, ekonómiou práce a verejnými financiami. Okrem toho sa športová ekonómia môže zaoberať aj témami rasovej a rodovej diskriminácie alebo reálnym ekonomickým dopadom konania športových udalostí či stavby športových zariadení. 
+	Športová ekonómia je podľa Bootha (\citeyear[s.~377]{booth2009}) kombináciou niekoľkých oblastí ekonómie, počínajúc napríklad ekonómiou práce, verejnými financiami alebo mikroekonomickými princípmi použitými v súvislosti so športovou organizáciou a priemyslom. Okrem toho sa športová ekonómia môže zaoberať aj témami rasovej a rodovej diskriminácie alebo reálnym ekonomickým dopadom konania športových udalostí či stavby športových zariadení. 
 	
-	Mimoriadne významná je skutočnosť, že pre ekonómiu ako vedu je vo všeobecnosti pomerne obtiažne a často krát dokonca nemožné  priamo testovať svoje teórie a hypotézy. Šport sa však vyznačuje jasne zadefinovanými pravidlami a generuje veľké množstvo dát, takže do určitej miery sa dá považovať za ideálne prostredie pre niektoré ekonomické skúmanie a testy, je akýmsi laboratóriom.
+	Mimoriadne významná je skutočnosť, že pre ekonómiu ako vedu je vo všeobecnosti pomerne obtiažne a často krát dokonca nemožné  priamo testovať svoje teórie a hypotézy. Šport sa však vyznačuje jasne zadefinovanými pravidlami a generovaním veľkého množstva dát. Do určitej miery sa dá šport považovať za ideálne prostredie pre niektoré ekonomické výskumy a testy, je akýmsi laboratóriom.
 	
-	Práce, ktoré prepájajú ekonómiu a šport sa často krát zameriavajú na profesionálne tímové športy ako basketbal, hokej a americký futbal, keďže tie sú typické práve už spomenutým veľkým objemom najrôznejších kvantitatívnych dát, ktoré pozostávajú nielen z tímových charakteristík, ale aj charakteristík jednotlivcov v rámci súťaže. Ide napríklad o bodovanie, držanie lopty alebo počet odohraných minút v hre.
+	Práce, ktoré prepájajú ekonómiu a šport sa môžu zameriavať napríklad na profesionálne tímové športy ako basketbal, hokej alebo americký futbal, keďže tie sú typické práve už spomenutým veľkým objemom najrôznejších kvantitatívnych dát, ktoré pozostávajú nielen z tímových charakteristík, ale aj charakteristík jednotlivcov v rámci súťaže. Ide napríklad o bodovanie, držanie lopty alebo počet odohraných minút v hre.
 	
-	Autorov zaoberajúcich sa športovou ekonómiou je mnoho a ich práce sa líšia nielen poňatím spracovaných tém ale napríklad aj náročnosťou textu. Publikácia od Leedsa (\citeyear{leeds2018}) obsahuje niekoľko konkrétnych príkladov aplikovania mikroekonómie a jej konceptov a teórií priamo na americké a medzinárodné športy, Késenne (\citeyear{kesenne2014}) sa vyznačuje analytickým poňatím teórie profesionálnych tímových športov a autori Sandy, Sloane a Rosentraub (\citeyear{sandy2004}) sa zameriavajú najmä na prípadové štúdie v súvislosti s Spojenými štátmi americkými, Kanadou, Európou a Austráliou. Odlišnou je publikácia Kupera a Syzmanskeho (\citeyear{kuper2009}), ktorá cez ekonómiu, ale aj štatistiku, psychológiu a teóriu hier odpovedá na mnohé zaujímavé otázky týkajúceho sa futbalu, napr. prečo sú krajiny ako Brazília, Nemecko a Španielsko vo futbale úspešné ale Anglicko nie. Foer (\citeyear{foer2004}) zas vo svojej publikácii používa futbal ako prostriedok na vysvetlenie tém akými sú napríklad globalizácia, antisemitizmus či nacionalizmus. Mnoho autorov sa v súvislosti so športom zaoberá motiváciou a teóriou motivačného efektu, ktorá je predmetom aj tejto bakalárskej práce. Preto sa nasledujúca podkapitola venuje práve motivačnému efektu.
+	Autorov zaoberajúcich sa športovou ekonómiou je mnoho a ich práce sa líšia nielen poňatím spracovaných tém, ale napríklad aj náročnosťou textu. Publikácia od Leedsa (\citeyear{leeds2018}) obsahuje niekoľko konkrétnych príkladov aplikovania mikroekonómie a jej konceptov a teórií priamo na americké a medzinárodné športy. Késenne (\citeyear{kesenne2014}) sa vyznačuje analytickým poňatím teórie profesionálnych tímových športov a autori Sandy, Sloane a Rosentraub (\citeyear{sandy2004}) sa zameriavajú najmä na prípadové štúdie v súvislosti so Spojenými štátmi americkými, Kanadou, Európou a Austráliou. Odlišnou je publikácia Kupera a Syzmanskeho (\citeyear{kuper2009}), ktorá cez ekonómiu, štatistiku, psychológiu a teóriu hier odpovedá na mnohé otázky týkajúceho sa futbalu, napr. prečo vo futbale krajiny ako Brazília, Nemecko a Španielsko vyhrávajú ale Anglicko nie. Foer (\citeyear{foer2004}) vo svojej publikácii používa futbal ako prostriedok na vysvetlenie tém akými sú napríklad globalizácia, antisemitizmus či nacionalizmus. Mnoho autorov sa v súvislosti so športom zaoberá motiváciou a teóriou motivačného efektu, ktorá je predmetom aj tejto bakalárskej práce. Preto sa nasledujúca podkapitola venuje práve motivačnému efektu.
 	
 		\section{Teória motivačného efektu}
-		Motivácia by sa dala vo všeobecnosti definovať ako akési vnútorné podnety jednotlivca k určitým aktivitám, správaniu a snahe dosahovať vytýčené ciele. Čo sa týka motivácie k súťaženiu, existuje niekoľko dôvodov prečo súťažiť. Podľa Frankena a Browna (\citeyear[s.~176]{franken1995}) niektorých ľudí motivuje možnosť uspokojiť si prostredníctvom súťaže a konkurencie v rámci nej potrebu výhry a chcú tak dosiahnuť svoju nadradenosť nad ostatnými. \parencite{nicholls1989} Títo jednotlivci chcú byť lepší ako iní. Na druhú stranu sú však aj ľudia, ktorých motivuje možnosť zlepšenia svojich schopností, tzn. že chcú byť lepší ako svoje včerajšie ja.
+		Motivácia by sa dala vo všeobecnosti definovať ako akýsi vnútorný podnet jednotlivca k určitým aktivitám, správaniu a snahe dosahovať vytýčené ciele. 
 		
-		Motivácia a súťaživosť, či už v športe alebo v živote ako takom, sa spájajú takmer automaticky. Súťaženie na seba môže brať mnoho podôb, či už ide o získanie najlepšej známky v triede, víťazstvo prvého miesta v športovom turnaji alebo získanie finančnej odmeny v súťaži predaja. \parencite[s.~210]{tauer1999}
+		Čo sa týka motivácie k súťaženiu, existuje niekoľko dôvodov prečo súťažiť. Podľa Frankena a Browna (\citeyear[s.~176]{franken1995}) niektorých ľudí motivuje možnosť uspokojiť si, prostredníctvom súťaže a konkurencie v rámci nej, potrebu výhry. Týmto spôsobom chcú dokázať svoju nadradenosť nad ostatnými. \parencite{nicholls1989} Na druhú stranu sú však aj ľudia, ktorých motivuje možnosť zlepšenia svojich schopností, tzn. že chcú byť lepší ako svoje včerajšie ja.
 		
-		Motivácia, ale aj jej opak demotivácia, sú veľmi silnými hybnými silami, ktorá vedia ovplyvniť psychickú pohodu a fyzický výkon. Táto práca sa venuje motivácií v súvislosti s basketbalovými zápasmi a tomu, aký je jej efekt na výsledok zápasu pri prehrávaní v polčase. Teórie motivačného efektu v športe sa stala predmetom skúmania mnohých autorov. Existujú autori, ktorí skúmali výrazné vyhrávanie tímov, ako napríklad Cooper (\citeyear{cooper1992}), podľa ktorého basketbalové tímy, ktoré sú výraznejšie popredu už v úvode hry vyhrávajú približne dve tretiny času. Na druhej strane sú autori, ktorí skúmali motivovanosť tímov, ktoré prehrávajú, či už tesne alebo výraznejšie. Nasledujúca kapitola obsahuje dovedna 5 prác, ktoré tvoria prehľad literatúry a rôznych prístupov a využitých nástrojov a metód viažucich sa k téme tejto bakalárskej práce, tzn. motivačnému efektu.
+		Motivácia a súťaživosť, či už v športe alebo v živote ako takom, sa spájajú takmer automaticky. Súťaženie na seba môže brať mnoho podôb, či už ide o získanie najlepšej známky v triede, víťazstvo prvého miesta v športovom turnaji alebo získanie finančnej odmeny za najlepší predaj. \parencite[s.~210]{tauer1999}
 		
+		Motivácia, ale aj jej opak demotivácia, sú veľmi silnými hybnými silami, ktoré vedú k ovplyvneniu psychickej pohody a fyzického výkonu. Táto práca sa venuje motivácií v súvislosti s basketbalovými zápasmi a tomu, aký je jej motivačný efekt na výsledok zápasu pri prehrávaní v polčase. Teória motivačného efektu v športe sa stala predmetom skúmania viacerých autorov. 
+		
+		Niektorí autori skúmali výrazné vyhrávanie tímov, napríklad Cooper (\citeyear{cooper1992}), podľa ktorého basketbalové tímy, ktoré sú výraznejšie popredu už v úvode hry vyhrávajú približne dve tretiny času. Ďalší autori sa zamerali na motivovanosť tímov, ktoré prehrávajú tesne ale aj výraznejšie. Nasledujúca podkapitola obsahuje dovedna \colorbox{yellow}{päť} prác, ktoré tvoria prehľad literatúry a rôznych prístupov a využitých nástrojov a metód viažucich sa k téme tejto bakalárskej práce, tzn. motivačnému efektu.
+		
+		\section{Literárna rešerš}
 		\subsection{Berger a Pope}
 		\label{sec:Berger}
-		Hlavnou prácou, o ktorú sa táto bakalárska práca opiera je článok Bergera a Popa (\citeyear{berger2011}) s príznačným názvom \textit{Can Loosing Lead to Winning?} čiže Môže prehrávanie viesť k víťazstvu?, ktorý má jednoznačný cieľ a to ukázať na reálnych dátach, že byť trochu pozadu môže v konečnom dôsledku viesť k zvýšeniu šancu na výhru a tak viesť k celkovému víťazstvu a to prostredníctvom motivácie.
+		Hlavnou prácou, o ktorú sa táto bakalárska práca opiera je článok Bergera a Popa (\citeyear{berger2011}) s názvom \textit{Can Loosing Lead to Winning?}, v preklade \textit{Môže prehrávanie viesť k víťazstvu?}, ktorý má jednoznačný cieľ a to ukázať na reálnych dátach, že byť pozadu môže v konečnom dôsledku viesť prostredníctvom motivácie k zvýšeniu šance na výhru.
 		
-		Rovnako ako táto bakalárska práca, aj Berger a Pope spracovávali dáta z basketbalových zápasov, skúmali, ako prehrávanie o trochu ovplyvňuje motiváciu a výkon a využili model regresnej diskontinuity. 
+		Rovnako ako táto bakalárska práca, aj Berger a Pope spracovávali dáta z basketbalových zápasov a skúmali pomocou modelu regresnej diskontinuity ako prehrávanie ovplyvňuje motiváciu a výkon. Regresná diskontinuita je bližšie vysvetlená v časti \ref{sec:rdd}.
 		
-		Dataset v štúdii tvorilo viac ako 18 000 zápasov profesionálnej NBA, v rozmedzí sezóny 1993/1994 a marca 2009, a viac ako 45 000 zápasov americkej univerzitnej basketbalovej ligy známej pod skratkou NCAA, ktoré sú z obdobia medzi sezónou 1999/2000 a marcom 2009. \parencite[s.~818]{berger2011} Dáta obsahujú okrem informácie kto bol víťazom zápasu aj údaje o bodovom skóre oboch tímov v polčase.
+		Dataset v štúdii tvorilo viac ako 18 000 zápasov profesionálnej NBA, v rozmedzí sezóny 1993/1994 a marca 2009, a viac ako 45 000 zápasov NCAA, Americkej univerzitnej basketbalovej ligy, ktoré sú z obdobia medzi sezónou 1999/2000 a marcom 2009. \parencite[s.~818]{berger2011} Dáta obsahujú okrem informácie kto bol víťazom zápasu aj údaje o bodovom skóre oboch tímov v polčase.
 		
 		Využitý ekonometrický model mal nasledovnú podobu:
 		\begin{equation}
-		win_{i} = \alpha + \beta [\textit{losing~at~halftime}]_{i} + \delta [\textit{score~difference~at~halftime}]_{i} + \gamma X_{i} + \varepsilon_{i},
+		\label{eq:bp}
+		\textit{výhra}_{i} = \alpha + \beta [\textit{prehrávanie~v~polčase}]_{i} + \delta [\textit{bodový~rozdiel~v~polčase}]_{i} + \gamma X_{i} + \varepsilon_{i},
 		\end{equation}
-		kde \textit{ win $ _{i} $} predstavuje umelú vysvetľovanú premennú, ktorá nadobúda hodnotu jedna keď domáci tím zápas vyhral a nula keď ho prehral, \textit{losing~at~halftime$ _{i} $} je vysvetľujúca premenná, ktorá je taktiež umelou premennou a nadobúda hodnotu jedna keď domáci tím prehráva v polčase o jeden a viac bodov a nula keď vyhráva. Druhou vysvetľujúcou premennou je \textit{score~difference~at~halftime$ _{i} $}, ktorá pozostáva z rozdielu v skóre medzi domácim a hosťujúcim tímom. \textit{Xi} v modeli reprezentuje maticu kontrolných premenných, ktorými sú výherné percentá domáceho a hosťujúceho tímu.  V modeli sa nachádza aj $\alpha$ ako úrovňová konštanta a $\varepsilon_{i}$, čiže náhodná zložka.
 		
-		Autori v práci menujú niekoľko dôvodov, prečo sa ich pozornosť zameriava práve na polčas. Vyzdvihujú najmä spätnú väzbu v polčase. Vo všeobecnosti spätná väzba pomáha ľuďom upraviť ich postup a snahu tak, aby boli schopní dosiahnuť stanovený cieľ. \parencite{locke2002} V prípade akéhokoľvek športu, nielen basketbalu, je hlavným cieľom víťazstvo.
+		kde \textit{výhra$_{i}$} predstavuje umelú vysvetľovanú premennú, ktorá nadobúda hodnotu jedna keď domáci tím zápas vyhral a nula keď ho prehral. Premenná \textit{prehrávanie~v~polčase$ _{i} $} je vysvetľujúca premenná, ktorá je taktiež umelou premennou a nadobúda hodnotu jedna keď domáci tím prehráva v polčase o jeden a viac bodov a nula keď vyhráva. Druhou vysvetľujúcou premennou je \textit{bodový~rozdiel~v~polčase$ _{i} $}, ktorá pozostáva z rozdielu v skóre medzi domácim a hosťujúcim tímom. \textit{Xi} v modeli reprezentuje maticu kontrolných premenných, ktorými sú sezónne výherné percentá domáceho a hosťujúceho tímu.  V modeli sa nachádza aj $\alpha$ ako úrovňová konštanta a $\varepsilon_{i}$, čiže náhodná zložka.
 		
-		Počas dlhšej pätnásť minútovej prestávky v polčase, oproti stotridsať sekundovej prestávke medzi prvou a druhou a treťou a štvrtou štvrtinou, si tímy a ich jednotliví hráči lepšie uvedomia súčasný stav a z neho vyplývajúci bodový rozdiel a tiež to, aké veľké zlepšenie bude potrebné na zníženie súperovho náskoku. Okrem toho je to ideálna príležitosť trénerov zmeniť taktiku hry, prehovoriť hráčom tzv. do duše a vyburcovať ich k lepšiemu výkonu. Keďže je basketbal tímový šport, polčas je vhodným momentom pre utuženie tímového ducha, prediskutovanie prípadných nejasnosti týkajúcich sa spolupráce hráčov a zvýšenie celkovej motivácie.
+		Autori v práci menujú niekoľko dôvodov, prečo sa ich pozornosť zameriava práve na polčas. Vyzdvihujú najmä spätnú väzbu v polčase. Vo všeobecnosti spätná väzba pomáha ľuďom upraviť ich postup a snahu tak, aby boli schopní dosiahnuť stanovený cieľ. \parencite{locke2002} Hlavným cieľom v akomkoľvek športe, takže aj v basketbale, je výhra.
+		
+		Počas dlhšej pätnásť minútovej prestávky v polčase, oproti stotridsať sekundovej prestávke medzi prvou a druhou a treťou, resp. štvrtou štvrtinou, si jednotliví hráči lepšie uvedomia súčasný stav a z neho vyplývajúci bodový rozdiel. Taktiež si vedia lepšie predstaviť, aké veľké zlepšenie bude potrebné na zníženie súperovho náskoku. Okrem toho je to ideálna príležitosť trénerov zmeniť taktiku hry, prehovoriť hráčom tzv. do duše a vyburcovať ich k lepšiemu výkonu. Keďže je basketbal tímový šport, polčas je vhodným momentom pre utuženie tímového ducha, prediskutovanie prípadných nejasnosti týkajúcich sa spolupráce hráčov a zvýšenie celkovej motivácie.
 		
 		\renewcommand{\figurename}{Graf}
 		\begin{figure}[h]
@@ -185,11 +191,16 @@
 			\caption{Percento vyhraných zápasov domáceho tímu na základe bodového rozdielu pre dáta z NBA – štúdia Berger a Pope}
 			\vskip\abovecaptionskip\emph{Zdroj: <<\cite{berger2011} a vlastné spracovanie>>}
 			\label{fig:NBA1}
+			\vskip\abovecaptionskip\emph{Pozn.: Nespracované dáta predstavujú čierne body a prerušovaná čiara znázorňuje lineárny tvar dát.}
 		\end{figure}
 	
-		Výsledky štúdie v oblasti zápasov NBA potvrdzujú predpoklad autorov z úvodu práce a to, že byť trochu pozadu môže viesť k výhre. Ako vidieť na grafe \ref{fig:NBA1}, ktorý je vykreslením vzťahu medzi percentom vyhraných zápasov domácim tímom a domácim skóre mínus hosťovským skóre v polčase, v bode nulového bodového rozdielu existuje diskontinuita. Prerušovaná čiara znázorňuje lineárny tvar dát. 
+		Výsledky štúdie v oblasti zápasov NBA potvrdzujú predpoklad autorov z úvodu práce, že byť trochu pozadu môže viesť k výhre. Ako vidieť na grafe \ref{fig:NBA1}, ktorý je vykreslením vzťahu medzi percentom  zápasov vyhraných domácim tímom a rozdielom v skóre domáceho a hosťovského tímu, v bode nulového bodového rozdielu existuje diskontinuita. 
 		
-		Na danom grafe je vidno, že čím viac tím vyhráva, resp. prehráva v polčase, tým je pravdepodobnejšie, že v konečnom dôsledku vyhrá, resp. prehrá. Avšak výsledky ukazujú aj to, že tímy, ktoré prehrávajú v polčase iba o trochu, vo výsledku vyhrávajú v porovnaní s očakávaním častejšie o 5,8 až 8,0 percentných bodov, viď tabuľka \ref{table:vplyvNBA1}. Berger a Pope hovoria, že namiesto toho, aby domáci tím prehrávajúci o bod mal o približne 5 až 8 percentných bodov nižšiu pravdepodobnosť výhry, takto prehrávajúce tímy sú pravdepodobnejšími víťazmi celého zápasu a vyhrávajú v 58,2 \% oproti 57,1 \% prípadov.
+		Výsledky testovania vplyvu prehrávania v polčase na výhru v NBA dátach sú zobrazené v tabuľke \ref{table:vplyvNBA1}. Stĺpce s označením (1), (2), (3) a (4) predstavujú štyri rôzne variácie základného modelu \ref{eq:bp}. Modely v stĺpcoch (1) a (3) obsahujú premennú \textit{score~difference~at~halftime} iba v jej lineárnej podobe, zatiaľ čo modely (2) a (4) obsahujú aj jej kubickú podobu. Modely (1) a (2) neobsahujú žiadnu ďalšiu kontrolnú premennú, modely (3) a (4) však zahŕňajú aj premennú sezónnych výherných percent domáceho a hosťujúceho tímu. Spojovník v tabuľke reprezentuje skutočnosť, že daná premenná sa v modeli nevyskytuje, zatiaľ čo premenné so symbolom X sú síce v modeli zahrnuté, avšak autori nezverejnili ich hodnoty. 
+		
+		Na spomenutom grafe \ref{fig:NBA1} je vidieť, že čím viac tím vyhráva, resp. prehráva v polčase, tým je pravdepodobnejšie, že v konečnom dôsledku vyhrá, resp. prehrá. Avšak výsledky ukazujú aj to, že tímy, ktoré prehrávajú v polčase iba o trochu, o jeden až dva body, vo výsledku vyhrávajú častejšie o 5,8 až 8,0 percentných bodov, viď tabuľka \ref{table:vplyvNBA1}. 
+		
+		Berger a Pope hovoria, že namiesto toho, aby domáci tím prehrávajúci o bod mal o približne 5 až 8 percentných bodov nižšiu pravdepodobnosť výhry, v skutočnosti je pravdepodobnejším víťazom celého zápasu s pravdepodobnosťou 58,2 \% prípadoch.
 		
 		\newcolumntype{x}[1]{>{\centering\hspace{0pt}}p{#1}}
 		\newcommand{\sizeofcolumn}{5.4em}
@@ -201,7 +212,7 @@
 			\begin{tabular}{|l||x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}x{\sizeofcolumn}|}
 				\hline
 				
-				\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná: $ win_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
+				\multirow{2}{*}{} & \multicolumn{4}{c|}{Závislá premenná:  výhra$_{i} $ = 1 ak domáci tím vyhral zápas} \tabularnewline \cline{2-5}
 				& (1) & (2) & (3) & (4) \tabularnewline \hline \hline
 				
 				\multirow{2}{*}{\textit{Prehrávanie v polčase}} & 0,058*** & 0,074*** & 0,062*** & 0,080*** \tabularnewline
@@ -238,20 +249,20 @@
 			\label{table:vplyvNBA1}
 		\end{table}	
 	
-		Okrem NBA ligy skúmali autori aj univerzitnú ligu NCAA a pokúšali sa zistiť, či motivačný efekt bytia pozadu existuje aj v nej. Použitý bol rovnaký typ dát ako aj rovnaké metódy skúmania. Výsledkom je potvrdenie výskytu motivačného efektu aj v tejto vzorke pozorovaní, aj keď sila motivačného efektu v tomto prípade nie je až taká vysoká, čo vidno nielen na grafe \ref{fig:NCAA1} kde je diskontinuita zobrazená menším skokom v bode nulového bodového rozdielu ale aj v tabuľke \ref{table:vplyvNCAA} v nižších medzných hodnotách koeficientov premennej prehrávania v polčase.
+		Okrem NBA ligy skúmali autori aj univerzitnú ligu NCAA a pokúšali sa zistiť, či sa motivačný efekt bytia pozadu vyskytuje aj v nej. Použitý bol rovnaký typ dát ako aj rovnaké metódy skúmania. Výsledkom je potvrdenie výskytu motivačného efektu aj v tejto vzorke pozorovaní, aj keď vplyv motivačného efektu v tomto prípade nie je až taký výrazný. Toto je znázornené nielen na grafe \ref{fig:NCAA1}, kde je diskontinuita zobrazená menším skokom v bode nulového bodového rozdielu, ale aj v tabuľke \ref{table:vplyvNCAA}, v nižších medzných hodnotách koeficientov premennej prehrávania v polčase.
 		
 		Po overení a potvrdení predpokladu o fungovaní motivačného efektu bytia pozadu sa autori rozhodli zistiť aj to, kedy má tento efekt najväčší vplyv. Očakávanie autorov bolo, že najväčší vplyv efektu je hneď po polčase, tj. v tretej tretine.
 		
-		Logit modely vytvorené na overenie tohto predpokladu sa svojou štruktúrou zhodovali s už skôr použitými modelmi až na ten rozdiel, že vysvetľovanou premennou nebola výhra celého zápasu ale v jednom prípade výhra v tretej a v druhom prípade vo štvrtej štvrtine. To znamená, že vysvetľované premenné indikovali to, či mal domáci tím viac bodov na konci danej štvrtiny ako súper. 
+		Logit modely vytvorené na overenie tohto predpokladu sa svojou štruktúrou zhodovali s už skôr použitými modelmi s tým rozdielom, že vysvetľovanou premennou nebola výhra celého zápasu ale výhra v tretej, resp. vo štvrtej štvrtine. To znamená, že vysvetľované premenné indikovali skutočnosť, či mal domáci tím viac bodov na konci danej štvrtiny ako súper. 
 		
 		Znamienka koeficientov pre premennú prehrávania v polčase sú v oboch prípadoch, pre tretiu aj štvrtú štvrtinu, kladné. Prehrávanie v polčase tým pádom zvýšilo pravdepodobnosť výhry v jednotlivých štvrtinách, avšak väčšie a štatisticky významné sú iba koeficienty pre tretiu tretinu, čím sa predpoklad autorov potvrdil. \parencite[s.~822]{berger2011}		
 			
-		Vyzdvihnutia hodné je zaujímavé upozornenie autorov, že motivačný efekt polčasového prehrávania je približne polovičnej veľkosti ako všeobecne populárny efekt domácej výhody.
+		Za zmienku stojí upozornenie autorov, že motivačný efekt polčasového prehrávania je približne polovičnej významnosti ako všeobecne populárny efekt domácej výhody.
 
 		\subsection{Merritt a Clauset}
-		Basketbal nie je jediný šport, ktorý bol podrobený skúmaniu v súvislosti s teóriou motivačného efektu. Štúdia Merritta a Clauseta (\citeyear{merritt2014}) sa okrem basketbalu venovala aj ďalším športom: americkému futbalu a hokeju. Autori sa zaoberajú pravdepodobnosťou ďalšieho skórovania pri vyhrávaní, resp. prehrávaní a skúmajú, či veľkosť vedenia v zápase poskytuje informáciu o tom, kto získa ďalšie body, tzn. dynamiku skórovania. To samo o sebe nie je predmetom tejto bakalárskej práce, avšak výsledky štúdie \textit{Scoring dynamics across professional team sports: tempo, balance and predictability} obsahujú zaujímavé poznatky aj z oblasti motivačného efektu prepojeného na basketbal.
+		Ďalším športom, ktorý bol podrobený skúmaniu v súvislosti s teóriou motivačného efektu. Štúdia Merritta a Clauseta (\citeyear{merritt2014}) sa okrem basketbalu venovala aj americkému futbalu a hokeju. Autori sa zaoberajú pravdepodobnosťou ďalšieho skórovania pri vyhrávaní, resp. prehrávaní a skúmajú, či veľkosť vedenia v zápase poskytuje informáciu o tom, kto získa ďalšie body, tzn. dynamiku skórovania. To samo o sebe nie je predmetom tejto bakalárskej práce, avšak výsledky štúdie \textit{Scoring dynamics across professional team sports: tempo, balance and predictability} obsahujú zaujímavé poznatky aj z oblasti motivačného efektu prepojeného na basketbal.
 		
-		Dataset tejto štúdie je pomerne rozsiahly a predstavujú ho zápasy počas 9 až 10  sezón štyroch amerických športových líg: CFL\footnote{Skratka autorov, ide o Univerzitnú ligu amerického futbalu.}, NFL\footnote{Celý názov National Football League, v preklade Národná futbalová liga.}, NBA a NHL\footnote{Celý názov National Hockey League, v preklade Národná hokejová liga.}. V štúdii autori pracujú s viac ako 40 000 zápasmi, tabuľka \ref{table:summary1;}, a spracovávajú ich kombináciou Bernoulliho a Poissonového procesu.
+		Dataset tejto štúdie je pomerne rozsiahly a predstavujú ho zápasy počas 9 až 10  sezón štyroch amerických športových líg: CFL\footnote{Skratka autorov, ide o Univerzitnú ligu amerického futbalu.}, NFL\footnote{Celý názov National Football League, v preklade Národná futbalová liga.}, NBA a NHL\footnote{Celý názov National Hockey League, v preklade Národná hokejová liga.}. V štúdii autori pracujú s viac ako 40 000 zápasmi, ktorých prehľad obsahuje tabuľka \ref{table:summary1;}. Tieto zápasy sú spracované kombináciou Bernoulliho a Poissonového procesu.
 	
 		\begin{table}[h]
 			\catcode`\-=12
@@ -273,32 +284,21 @@
 			\label{table:summary1;}
 		\end{table}
 	
-		Výsledky štúdie nie sú totožné naprieč všetkými štyrmi ligami. Pravdepodobnosť ďalšieho skórovania sa v CFL, NFL a NHL zvyšuje s veľkosťou vedenia, zatiaľ čo v prípade NBA, teda basketbalu, sa táto pravdepodobnosť znižuje. Plynutím hry  tak môže dôjsť k zmenšovaniu vedúcej pozície až kým sa vedenie nezmení v remízu, čo vytvára z basketbalu v podstate nepredvídateľnú hru. Podľa autorov je jedným z možných vysvetlení práve motivačný efekt, kedy sa prehrávajúci tím snaží  jednoducho viac, tzn. že pravdepodobnosť skórovania je vyššia. Nie je však jasné, prečo by sa tento fenomén objavil iba v prípade NBA. \parencite[s.~18]{merritt2014}
+		Výsledky štúdie nie sú totožné naprieč všetkými štyrmi ligami. Pravdepodobnosť ďalšieho skórovania sa v CFL, NFL a NHL zvyšuje s výškou vedenia, zatiaľ čo v prípade NBA, teda basketbalu, sa táto pravdepodobnosť znižuje. Plynutím hry tak môže dôjsť k zmenšovaniu vedúceho náskoku až kým sa vedenie nezmení v remízu, čo vytvára z basketbalu akúsi nepredvídateľnú hru. Podľa autorov je jedným z možných vysvetlení práve motivačný efekt, kedy sa prehrávajúci tím snaží viac, tzn. že pravdepodobnosť skórovania je vyššia. Nie je však jasné, prečo sa tento fenomén objavil iba v prípade NBA. \parencite[s.~18]{merritt2014}
 	
-		Autori však ponúkajú zdôvodnenie, podľa ktorého to môžu spôsobovať stratégie tímov NBA, ktoré sú špecifické práve pre tento šport. Ako príklad je možné spomenúť stiahnutie lepších a skúsenejších hráčov zo zápasu pri vedení, aby sa zbytočne neprepínali  alebo aby sa dokonca nezranili. Bez týchto hráčov sa pravdepodobnosť skórovania pre vedúci tým znižuje. Oproti tomu napríklad v hokeji hráči rotujú v jednotlivých formáciách a v americkom futbale takéto „náhrady“ ako v basketbale nie sú časté. \parencite[s.~19]{merritt2014}
+		Autori však ponúkajú zdôvodnenie, podľa ktorého to môžu spôsobovať stratégie tímov NBA, ktoré sú špecifické pre tento šport. Ako príklad prezentovali stiahnutie lepších a skúsenejších hráčov zo zápasu pri vedení, aby sa zbytočne neprepínali  alebo aby sa nezranili. Bez týchto hráčov sa pravdepodobnosť skórovania pre vedúci tým znižuje. Oproti tomu napríklad v hokeji hráči rotujú v jednotlivých formáciách a v americkom futbale takéto „náhrady“ ako v basketbale nie sú časté. \parencite[s.~19]{merritt2014}
 	
 		\subsection{Bergerhoff a Vosen}
-		Bergerhoff a Vosen (\citeyear{bergerhoff2015}) sa taktiež zameriavajú na fenomén, kedy byť pozadu, môže byť za určitých okolností výhodnejšie. Špecifikom tejto štúdie je testovanie predmetu skúmania prostredníctvom modelovej situácie, tzn. bez použitia reálnych dát.
+		Bergerhoff a Vosen (\citeyear{bergerhoff2015}) sa taktiež zameriavajú na fenomén, kedy byť pozadu môže byť za určitých okolností výhodnejšie. Špecifikom tejto štúdie je testovanie predmetu skúmania prostredníctvom modelovej situácie, tzn. bez použitia reálnych dát.
 		
-		Výsledné zistenia sú, že cena turnaja, ligy či súťaže, napr. finančné ohodnotenie, trofej alebo prestíž z výhry, a samotná tesná hra motivujú hráčov prekonať prípadnú počiatočnú nevýhodu, vynaložiť viac úsilia a preto majú títo hráči vyššiu pravdepodobnosť výhry. \parencite[s.~20]{bergerhoff2015} Dalo by sa povedať, že keď počiatočné znevýhodnenie silno zvýhodňuje jednu stranu, tá je motivovanejšia a vyvíja väčšiu snahu, avšak keď je rozdiel minimálny a teda tesný, tá strana, ktorá mierne stráca sa ukazuje ako motivovanejšia a snaživejšia.
+		Zistenia autorov sú, že hráčov motivujú k prekonaniu počiatočnej nevýhodu dve skutočnosti. Buď cena turnaja, ligy alebo súťaže v podobe finančného ohodnotenie, trofeje či prestíže z výhry alebo tesná hra sama o sebe. Hráči následne vynakladajú viac úsilia a preto majú vyššiu pravdepodobnosť výhry. \parencite[s.~20]{bergerhoff2015} Dalo by sa povedať, že keď v začiatku určité znevýhodnenie jednej strany spôsobí silné zvýhodnenie druhú stranu, tá sa stáva motivovanejšou a vyvíja väčšiu snahu. Avšak v prípade, keď je rozdiel v skóre minimálny a zápas je tesný, ten tím, ktorý momentálne mierne stráca sa ukazuje ako motivovanejší a snaživejší.
 		
-		Tieto výsledky, ako uznávajú aj samotní autori, vysvetľujú a podporujú závery Bergera a Popa (\citeyear{berger2011}), ktoré sú spomenuté vyššie v sekcii \ref{sec:Berger}.
-		
-		\subsection{Barankay}
-		Rozdielne výsledky priniesla štúdia Barankaya (\citeyear{barankay2010}), ktorá sa síce nezameriava na oblasť športu, avšak skúma do akej miery vie porovnávanie sa s druhými, ktoré prebieha napríklad počas celej dĺžky športových zápasov a ešte viac v čase prestávky, ovplyvniť ľudské správanie a teda zvýšiť alebo znížiť snahu.
-		
-		Cieľom využitého field experimentu bolo zistiť, ako ľudia prispôsobia svoju snahu v prípade, že dostanú hodnotenie svojej práce porovnávajúce ich s ostatnými zamestnancami. 
-		
-		Účastníci tohto experimentu, zamestnanci, boli najatí na prácu analýzy obrázkov. Zamestnanci boli následne rozdelení do dvoch skupín, pričom členovia experimentálnej skupiny dostali spätnú väzbu o tom, aké je ich hodnotenie voči ostatným v otázke presnosti ich práce. 
-		
-		Výsledkom experimentálnej skupiny oproti kontrolnej skupine bola 30\% šanca, že sa zamestnanci do práce nevrátia, a ak sa vrátia, sú o 22\% menej výkonní. To znamená, že závery tejto štúdie poukazujú na fakt, že pri „prehrávaní“ nedochádza k zlepšeniu, práve naopak, prevláda demotivácia. \parencite[s.~4]{barankay2010}
-		
-		V tomto experimente však hodnotenia nemali vplyv na finančné ohodnotenie zamestnancov, zatiaľ čo pri športových zápasoch by sa dalo argumentovať, že vzájomné porovnávanie dvoch tímov počas zápasu môže ovplyvniť motiváciu tímu iným spôsobom a do inej miery a to za predpokladu, že lepšie výsledky tímu a viac výhier môžu znamenať viac peňazí pre tím a teda lepšie finančné ohodnotenie jednotlivých hráčov.
+		Tieto výsledky, ako uznávajú aj samotní autori, vysvetľujú a podporujú závery Bergera a Popa (\citeyear{berger2011}), ktoré sú spomenuté vyššie v oddieli \ref{sec:Berger}.
 		
 		\subsection{Schneemann}
-		Ďalšou štúdiou, ktorá sa výsledkom nezhoduje s prácou Bergera a Popa (\citeyear{berger2011}) je štúdia Schneemanna a Deutschera (\citeyear{schneemann2017}). Dataset v tomto prípade tvorili zápasy nemeckej futbalovej Bundesligy a to z dvoch sezón  2011/2012 a 2013/2014, čo dovedna tvorí 918 zápasov. Autori na spracovanie dát využívali deskriptívnu štatistiku a regresnú analýzu.
+		Štúdia, ktorá sa výsledkom nezhoduje s prácou Bergera a Popa (\citeyear{berger2011}) je štúdia Schneemanna a Deutschera (\citeyear{schneemann2017}). Dataset v tomto prípade tvorili zápasy nemeckej futbalovej Bundesligy a to z dvoch sezón  2011/2012 a 2013/2014, čo dovedna tvorí 918 zápasov. Autori na spracovanie dát využívali deskriptívnu štatistiku a regresnú analýzu.
 		
-		Z mnohých výsledkov a zistení tejto práce sú pre túto bakalársku prácu najrelevantnejšie zistenia týkajúce sa motivácie hráčov počas zápasu v závislosti od jeho vývoja. Pri interpretácií výsledkov je dôležité brať do úvahy bodovanie výsledného skóre futbalového zápasu a medzné straty tímov pri jednotlivých výsledkoch (viď tabuľka \ref{table:futbal;}).
+		Z mnohých výsledkov a zistení tejto práce sú pre túto bakalársku prácu najrelevantnejšie zistenia týkajúce sa motivácie hráčov počas zápasu v závislosti od jeho vývoja. Pri interpretácií výsledkov je dôležité brať do úvahy bodovanie výsledného skóre futbalového zápasu a medzné straty, resp. zisky tímov vzťahujúce sa na jednotlivé výsledky, viď tabuľka \ref{table:futbal;}. 
 		
 		\begin{table}[h]
 			\catcode`\-=12
@@ -323,50 +323,71 @@
 			\label{table:futbal;}
 		\end{table}
 		
+		Prvý stĺpec tabuľky \ref{table:futbal;} obsahuje hodnoty rozdielu v skóre medzi dvomi tímami. Druhý stĺpec priraďuje danému rozdielu v skóre pomenovanie stavu. Počet bodov, ktoré tím získa v súvislosti s niektorým zo stavov zápasu sa nachádza v treťom stĺpci. Posledné dva stĺpce vypovedajú o medznej strate a medznom zisku ak sa stav zmení. To, o čom vypovedá táto tabuľka možno ilustrovať na príklad: ak tím prehráva o dva góly, jeho bodový zisk je nula. Ak by dal jeden gól, prehrával by síce už iba o rozdiel jedného gólu, avšak jeho bodový zisk by bol stále nula. Tým pádom by sa nezmenila hodnota ani medznej straty ani zisku. Ak by však dal ešte jeden gól, skóre by sa vyrovnalo a stav by sa zmenil na remízu. Bodový zisk tímu by bol jedna. Medzný zisk tohto posunu z prehry na remízu by bol jedna. Ak by dal tím ešte tretí gól, stav by sa zmenil na výhru, bodový zisk by bol tri body a medzný zisk oproti predchádzajúcej pozícií by bol dva.
+		
 		Najväčšia motivácia sa prejavila v prípade, keď tím viedol o jeden gól. Akonáhle tím zaostával za súperom o jeden gól, motivácia bola v porovnaní s remízovým skóre alebo vedúcim skóre podstatne nižšia. Autori tento fenomén opodstatňujú hráčskou averziou voči prehre, tzn. že oveľa viac im záleží na tom, aby sa vyhli prehre ako na tom, aby získali výhru. 
 		
-		V prípade, že tím vedie v zápase jednogólovým rozdielom, stačí jeho súperovi jediný gól na to, aby sa stav zmenil na remízu a doteraz vyhrávajúci tím by prišiel o dva body. Možnosť straty dvoch bodov je pre tím väčším podnetom, ako možnosť získať dva body~\footnote{V situácií remízy.}. 
+		V prípade, že tím A vedie v zápase jednogólovým rozdielom, stačí jeho súperovi, tímu B, jediný gól na to, aby sa stav zmenil na remízu. Doteraz vyhrávajúci tím, by miesto troch bodov získal iba jeden, tzn. že by prišiel o dva body. Možnosť straty dvoch bodov je pre tím A výraznejším podnetom, akým je pre tím B možnosť získať dva body. 
 	
-		Rovnaký princíp je uplatniteľný aj o pomyselnú úroveň nižšie, pri porovnávaní remízy a prehrávania o jeden gól, tzn. že tímy sa viac obávajú straty jedného bodu, ktorý by dostali ak by zápas skončil remízou, ako si cenia zisk dodatočného bodu. \parencite[s.~1768]{schneemann2017}
+		Rovnaký princíp je uplatniteľný aj pri porovnávaní remízy a prehrávania o jeden gól. Tímy sa viac obávajú toho, že sa pre nich stav zápasu zmení z remízy na prehru (a miesto jedného bodu by nezískali žiadny) ako si cenia zmenu stavu z prehry na remízu (miesto žiadneho bodu by získali jeden). \parencite[s.~1768]{schneemann2017}
 		
-		Pravdaže v porovnaní s prácou napr. Bergera a Popa (\citeyear{berger2011}) treba brať do úvahy rozdielnosť povahy skúmaných športov a to najmä v súvislosti s množstvom bodov, ktoré počas jednotlivých zápasov padnú, nakoľko skórovanie v basketbale je, v porovnaní s futbalom, kde často rozhodne jediný gól, oveľa frekventovanejšie.
+		V porovnaní s prácou Bergera a Popa (\citeyear{berger2011}) treba brať do úvahy rozdielnosť povahy skúmaných športov a to najmä v súvislosti s množstvom bodov, ktoré počas jednotlivých zápasov padnú. Skórovanie v basketbale je v porovnaní s futbalom, kde často rozhodne jediný gól, oveľa frekventovanejšie.
+		
+		\subsection{Barankay}
+		Rozdielne výsledky priniesla aj štúdia Barankaya (\citeyear{barankay2010}), ktorá sa nezameriava na oblasť športu a sústreďuje sa na motivačný efekt zamestnancov. 
+		
+		Autor štúdie skúma do akej miery vie porovnávanie sa s druhými ovplyvniť ľudské správanie a teda zvýšiť alebo znížiť snahu a výkon. Cieľom tzv. field experimentu bolo zistiť, ako ľudia prispôsobia svoju snahu v prípade, že dostanú hodnotenie svojej práce porovnávajúce ich s ostatnými zamestnancami. 
+		
+		Účastníci tohto experimentu, boli najatí na prácu analýzy obrázkov. Zamestnanci boli následne rozdelení do dvoch skupín, pričom členovia experimentálnej skupiny dostali spätnú väzbu o tom, aké je ich hodnotenie voči ostatným v otázke presnosti ich práce. 
+		
+		Výsledkom experimentálnej skupiny oproti kontrolnej skupine bola 30\% šanca, že sa zamestnanci do práce nevrátia, a ak sa vrátia, sú o 22\% menej výkonní. To znamená, že závery tejto štúdie poukazujú na fakt, že pri „prehrávaní“ nedochádza k zlepšeniu, práve naopak, prevláda demotivácia. \parencite[s.~4]{barankay2010}
+		
+		V tomto experimente však hodnotenia nemali vplyv na finančné ohodnotenie zamestnancov. Pri športových zápasoch by sa dalo argumentovať, že vzájomné porovnávanie dvoch tímov počas zápasu môže ovplyvniť motiváciu tímu inak ako v tomto prípade. Nutný je však predpoklad, že lepšie výsledky tímu a viac výhier môžu znamenať viac peňazí pre tím a teda lepšie finančné ohodnotenie jednotlivých hráčov.
 				
 	\chapter{Basketbal ako šport}
-	Cieľom tejto kapitoly nie je ísť do podrobností v súvislosti s či už pravidlami alebo históriou jednotlivých líg, ale aspoň v stručnosti definovať basketbal ako šport, keďže táto bakalárska práca sa týka práve tohto športu, a jednotlivé basketbalové ligy, s ktorých dátami pracuje.
+	Cieľom tejto kapitoly nie je ísť do podrobností v súvislosti s pravidlami alebo históriou jednotlivých líg, ale v stručnosti definovať basketbal ako šport a jednotlivé basketbalové ligy, ktoré sú zdrojom dát pre túto prácu.
 	
-	Basketbal je kolektívny šport desiatich hráčov rozdelených do dvoch súperiacich tímov. Cieľom hry rozdelenej na štyri štvrtiny je získať viac bodov ako súper. Body sú udeľované za trafenie lopty do basketbalového koša druhého tímu. Počet bodov za jednotlivé skórovania sa líši podľa ich povahy a miesta, z ktorého bol kôš trafený. Kôš hodený z dvojbodového územia je ohodnotený dvomi bodmi, kôš zo vzdialenejšieho územia je za tri body a trestný hod je za jeden bod. Zápasy pritom nemôžu skončiť remízou, podobne ako je to napríklad pri tenise, a v prípade, že sa o víťazovi zápasu nerozhodne v základnej hracej dobe, nastavuje sa toľko päť minútových predĺžení, koľko je potrebné.
+	Basketbal je kolektívny šport desiatich hráčov rozdelených do dvoch súperiacich tímov. Cieľom hry rozdelenej na štyri štvrtiny je získať viac bodov ako súper. Body sú udeľované za trafenie lopty do basketbalového koša druhého tímu. Počet bodov za jednotlivé skórovania sa líši podľa ich povahy a miesta, z ktorého bol kôš trafený. Kôš hodený z dvojbodového územia je ohodnotený dvomi bodmi, kôš zo vzdialenejšieho územia je za tri body a trestný hod je za jeden bod. Zápasy pritom nemôžu skončiť remízou, podobne ako je to napríklad pri tenise. V prípade, že sa o víťazovi zápasu nerozhodne v základnej hracej dobe, nastavuje sa toľko predĺžení, koľko je potrebné.
 	
 		\section{Charakteristika basketbalových líg}
-		Táto bakalárska práca bude pracovať so zápasmi z piatich basketbalových líg a to českou Národnou basketbalovou ligou a Ženskou basketbalovou ligou, americkou Národnou basketbalovou asociáciou a Ženskou národnou basketbalovou asociáciou a Euroligou v basketbale mužov.
-		
-		Prvé dve ligy sú českými najvyššími basketbalovými ligami. Tou mužskou je Národná basketbalová liga, skrátene NBL, ktorá vznikla v roku 1993 po rozdelení Československa a zániku Československej basketbalovej ligy. Počet basketbalových tímov je dvanásť.
+		Táto bakalárska práca pracuje so zápasmi z nasledujúcich piatich basketbalových líg:
+		\begin{itemize}
+		\item Národná basketbalová liga (ČR),
+		\item Ženská basketbalová liga (ČR),
+		\item Národná basketbalová asociácia (USA),
+		\item Ženská národná basketbalová asociácia (USA),
+		\item Euroliga.
+		\end{itemize}
+	
+		Prvé dve ligy sú českými najvyššími basketbalovými ligami. Národná basketbalová liga, skrátene NBL, je mužská liga, ktorá vznikla v roku 1993 po rozdelení Československa a zániku Československej basketbalovej ligy. Počet basketbalových tímov je dvanásť.
 		
 		Ženská basketbalová liga, skrátene ŽBL, je najvyššou českou ženskou basketbalovou ligou a 
-		vznikla v roku 1993 za rovnakých okolností ako NBL. Súčasný názov však nesie až od roku 2005, premenovaná bola z 1. basketbalovej ligy žien. Počet jej tímov sa v priebehu rokov menil, v súčasnosti je ustálený na rovnakom čísle ako v prípade NBL, takže dvanásť.
+		vznikla v roku 1993 za rovnakých okolností ako NBL. Súčasný názov však nesie až od roku 2005, premenovaná bola z 1. basketbalovej ligy žien. Počet jej tímov sa v priebehu rokov menil, v súčasnosti je ustálený na rovnakom čísle ako má NBL.
 		
-		Americká Národná basketbalová asociácia, známa pod skratkou NBA, je najpopulárnejšou basketbalovou ligou sveta, ktorá má aj spomedzi tu spomenutých líg najdlhšiu históriu nakoľko vznikla v roku 1946. Z organizačného hľadiska sa delí na Východnú a Západnú konferenciu, každá z nich sa ďalej delí na tri divízie, ktoré majú po päť tímov, takže dokopy tvorí NBA tridsať basketbalových klubov.
+		Americká Národná basketbalová asociácia, známa pod skratkou NBA, je najpopulárnejšou basketbalovou ligou sveta, ktorá má aj spomedzi tu spomenutých líg najdlhšiu históriu nakoľko vznikla v roku 1946. Z organizačného hľadiska sa delí na Východnú a Západnú konferenciu. Každá z nich sa ďalej delí na tri divízie, ktoré majú po päť tímov, takže NBA tvorí dokopy tridsať basketbalových klubov.
 		
-		Ženská národná basketbalová asociácia (WNBA) je ženským náprotivkom mužskej NBA, ktorá sa líši napríklad dĺžkou existencie, počtom tímov či minutážou štvrtín – WNBA bola založená v roku 1994, tvorí ju dvanásť tímov a štvrtiny trvajú desať minút.
+		Ženská národná basketbalová asociácia, WNBA, je ženským náprotivkom mužskej NBA, ktorá sa líši napríklad dĺžkou existencie, počtom tímov či minutážou štvrtín – WNBA bola založená v roku 1994, tvorí ju dvanásť tímov a štvrtiny netrvajú dvanásť, ale desať minút.
 		
-		Poslednou ligou je tzv. Euroliga, ktorá je európskou basketbalovou mužskou ligou, tvorenou niekoľkými víťazmi národných líg a  niektorými najväčšími európskymi tímami – dokopy ide o šestnásť klubov. 
+		Poslednou ligou je Euroliga, ktorá je európskou basketbalovou mužskou ligou, tvorenou niekoľkými víťazmi národných líg a niektorými vybranými európskymi tímami – dokopy ide o šestnásť klubov. 
 		
-		Každá liga má svoje špecifiká, rozdielov v pravidlách medzi jednotlivými ligami je niekoľko, pre túto prácu však nie sú významné. Spomenúť však možno napríklad veľkosť ihriska, vzdialenosť trojbodového skórovania či dĺžku prestávky medzi prvou a druhou a treťou a štvrtou štvrtinou. Okrem toho sa môže líšiť aj systém súťaže. Pre ilustráciu, systém súťaže českej NBL a ŽBL je nasledovný a skladá sa z troch časti: základnej časti, play off a play out. Základná časť, alebo aj tzv. dlhodobá časť, je dvojkolová hra každého tímu s každým – raz doma, raz von. 
+		Každá liga má svoje špecifiká. Rozdielov v pravidlách medzi jednotlivými ligami je niekoľko, pre túto prácu však nie sú významné. Spomenúť však možno napríklad veľkosť ihriska, veľkosť dvojbodového územia či dĺžku prestávky medzi prvou a druhou, resp. treťou a štvrtou štvrtinou. Okrem toho sa môže líšiť aj systém súťaže. Pre ilustráciu, systém súťaže českej NBL a ŽBL sa skladá z troch nasledovných časti: základnej časti, play off a play out. Základná časť, alebo aj tzv. dlhodobá časť, je dvojkolová hra každého tímu s každým – na domácom, resp. súperovom ihrisku. 
 		
-		Play off sa skladá zo štvrťfinále, semifinále a finále a zápasu o tretie miesto. Štvrťfinále sa hrá na základe umiestnenia tímov v základnej časti podľa vzorca prvý s ôsmim, druhý so siedmim, tretí so šiestym a štvrtý s piatym. Maximálny počet hier vo štvrťfinále je päť, keďže sa hrá na tri víťazné zápasy. Do semifinále teda postupujú štyri najlepšie tímy, ktoré hrajú podľa obdobného vzorca ako vo štvrťfinále, tzn. prvý so štvrtým a druhý s tretím a to stále na základe umiestnenia zo základnej časti. Opäť sa hrá na tri víťazstvá. Následne víťazi zo semifinále postupujú do finále a kto vyhrá opätovne ako prvý tri zápasy, získa titul majstra Českej republiky.
+		Play off sa skladá zo štvrťfinále, semifinále, finále a zápasu o tretie miesto. Štvrťfinále sa hrá na základe umiestnenia tímov v základnej časti podľa vzorca prvý s ôsmim, druhý so siedmim, tretí so šiestym a štvrtý s piatym. Štvrťfinále sa hrá na tri víťazné zápasy, takže maximálny počet zápasov medzi dvomi tímami je päť. Do semifinále postupujú štyri víťazné tímy, ktoré hrajú podľa obdobného vzorca ako vo štvrťfinále, tzn. prvý so štvrtým a druhý s tretím a to na základe umiestnenia zo základnej časti. Opäť sa hrá na tri víťazstvá. Víťazi zo semifinále postupujú do finále a kto vyhrá opätovne ako prvý tri zápasy, získa titul majstra Českej republiky.
 		
-		Play out je časť súťaže, kedy posledné štyri tímy, teda tie, ktoré sa nedostali do play off, hrajú tzv. kvalifikačnú skupinu formou každý s každým kvalifikačnú skupinu o udržanie sa v NBL. Tím, ktorý sa umiestni na konečnom poslednom mieste zostupuje do nižšej ligy, tj. 1.ligy. Na jeho miesto postúpi práve víťaz 1.ligy, ktorý však môže odmietnuť a v tom prípade je podľa pravidiel táto možnosť postúpená tímu, ktorý skončil na druhom mieste. \parencite{bulletin2018}
+		Play out je časť súťaže, kedy posledné štyri tímy, teda tie, ktoré sa nedostali do play off, hrajú tzv. kvalifikačnú skupinu formou každý s každým o udržanie sa v NBL. Tím, ktorý sa umiestni na poslednom mieste zostupuje do nižšej ligy, tj. 1.ligy. Na jeho miesto postúpi víťaz 1.ligy, ktorý však môže odmietnuť a v tom prípade je podľa pravidiel táto možnosť postúpená tímu, ktorý skončil na druhom mieste. \parencite{bulletin2018}
 
 	\chapter{Model regresnej diskontinuity a jeho využitie}
 		\section{Regresná diskontinuita}
-		Použitou metódou v tejto práci je tzv. regression discontinuity design, v preklade model regresnej diskontinuity alebo aj nespojitá regresia, známa aj pod skratkou RDD. Ako prví rozpracovali regresnú diskontinuitu autori Thistlethwaite a Campbell (\citeyear{thist1960}), ktorí vo svojej práci skúmali vplyv odmeny za dobré štúdium na budúce akademické úspechy študentov v Spojených štátoch. Dobrým štúdiom je myslený dobrý výsledok v teste PSAT~\footnote{Plný angl. názov Preliminary SAT, známy aj ako National Merit Scholarship Qualifying Test.}, ktorý píšu študenti stredných škôl a na základe ktorého sú následne udeľované štipendiá organizáciou NMSC~\footnote{Plný angl. názov National Merit Scholarship Corporation.}. Budúce akademické úspechy predstavuje tzv. GPA~\footnote{Plný angl. názov Grade Point Average je spôsob merania akademickej úspešnosti známy najmä z USA.}.
+		\label{sec:rdd}
+		Použitou metódou v tejto práci je tzv. regression discontinuity design, v preklade model regresnej diskontinuity alebo aj nespojitá regresia, známa pod skratkou RDD. Ako prví predstavili regresnú diskontinuitu autori Thistlethwaite a Campbell (\citeyear{thist1960}), ktorí vo svojej práci skúmali vplyv odmeny za dobré štúdium na budúce akademické úspechy študentov v Spojených štátoch. Dobrým štúdiom je myslený dobrý výsledok v teste PSAT~\footnote{Plný angl. názov Preliminary SAT, známy aj ako National Merit Scholarship Qualifying Test.}, ktorý píšu študenti stredných škôl a na základe ktorého sú následne udeľované štipendiá organizáciou NMSC~\footnote{Plný angl. názov National Merit Scholarship Corporation.}. Budúce akademické úspechy predstavuje tzv. GPA~\footnote{Plný angl. názov Grade Point Average je spôsob merania akademickej úspešnosti známy najmä v USA.}.
 	
-		Skúmanie prebiehalo nasledovne: odmeny vo forme štipendií sú udeľované pri dosiahnutí konkrétneho počtu bodov, tzn. že existuje určitá hranica, ktorá keď je prekonaná, študentovi je udelené štipendium. Naopak, ak študent bodovú hranicu nedosiahne, na štipendium nemá nárok. 
-	
-		Študenti, ktorí dosiahli bodové ohodnotenie tesne nad a tesne po hranicou sú v podstate rovnakí, alebo aspoň veľmi podobní, avšak tí pod štipendium nezískajú a tí nad áno. Model regresnej diskontinuity porovnáva študentov tesne pod a tesne nad hranicou a rozdiel medzi nimi pripisuje vplyvu udelenia štipendia. 
+		Skúmanie prebiehalo nasledovne: odmeny vo forme štipendií sú udeľované pri dosiahnutí konkrétneho počtu bodov, tzn. že existuje určitá hranica, ktorá keď je prekonaná, tak je študentovi udelené štipendium. Naopak, ak študent bodovú hranicu nedosiahne, na štipendium nemá nárok. 
+		
+		Študenti, ktorí dosiahli bodové ohodnotenie tesne nad a tesne pod hranicou sú rovnakí, alebo aspoň veľmi podobní, a v podstate dosiahli rovnaké výsledky, avšak tí pod hranicou štipendium nezískajú a tí nad áno. Model regresnej diskontinuity porovnáva v práci Thistlethwaita a Campbella (\citeyear{thist1960}) študentov tesne pod a tesne nad hranicou a rozdiel medzi nimi pripisuje vplyvu udelenia štipendia. 
 	
 		Očakávania autorov sa v tomto prípade potvrdili. S vyšším počtom získaných bodov  v teste PSAT mali študenti lepšie GPA, avšak vďaka pôsobeniu štipendia sa v hraničnom bode pre zisk štipendia vyskytol nespojitý skok. Tento skok a jeho veľkosť predstavuje odhad efektu regresnej diskontinuity.
 		
-		Vo svojej najjednoduchšej podobe má model regresnej diskontinuity následnú podobu:
+		Vo svojej najjednoduchšej podobe má model regresnej diskontinuity nasledujúcu podobu:
 		
 		\begin{equation}
 		Y_{i} = \alpha + \beta _{1} [\textit{X}]_{i} + \beta _{2} [\textit{D}]_{i} + \varepsilon_{i}
@@ -381,28 +402,26 @@
 		\end{cases}
 		\end{equation}
 		
-		\textit{Y} je vysvetľovaná premenná, $\alpha$ je úrovňová konštanta, premenná \textit{X} je hodnota vysvetľujúcej premennej, \textit{D} je umelá premenná, ktorá vyjadruje či je \textit{X} nad alebo pod hranicou h a $\varepsilon_{i}$ je náhodná zložka. 
+		\textit{Y} je vysvetľovaná premenná, $\alpha$ je úrovňová konštanta, premenná \textit{X} je hodnota vysvetľujúcej premennej, \textit{D} je umelá premenná, ktorá vyjadruje či je \textit{X} nad alebo pod hranicou h a $\varepsilon_{i}$ je náhodná zložka a $\beta _{1}$ a $\beta _{2}$ sú parametre vysvetľujúcich premenných. 
 		
-		To znamená, že pri bližšom pohľade na príklad so štipendiami je hodnota GPA vysvetľovanou premennou \textit{Y}, výsledok v teste PSAT je \textit{X} a \textit{D} nadobúda, napríklad, hodnotu jedna ak je študent nad bodovou hranicou a nula ak je pod ňou.
+		To znamená, že pri bližšom pohľade na príklad so štipendiami je hodnota GPA vysvetľovanou premennou \textit{Y}, výsledok v teste PSAT je \textit{X} a \textit{D} nadobúda hodnotu jedna ak je študent nad bodovou hranicou a hodnota nula ak je pod ňou.
 	
-		Ďalším príkladom práce, v ktorej autori využili RDD, je napríklad práca Carpentera a Dobkina (\citeyear{carpenter2011}), ktorí skúmali minimálnu legálnu hranicu pitia alkoholu v USA a jej vplyv na konzumáciu alkoholu mladých ľudí. Banks a Mazzonna (\citeyear{banks2012}) sa zamerali na zvýšenie minimálnej školskej dochádzky zo štrnásť na pätnásť rokov a skúmali vplyv dodatočného roku štúdia na kognitívne schopnosti v staršom veku. Regresnú diskontinuitu má za osvedčenú a efektívnu metódu aj Európska komisia, ktorá ju využíva ako metódu hodnotenia štátnej pomoci. \parencite[s.~20]{ek2014} 
+		Ďalším príkladom práce, v ktorej autori využili RDD, je napríklad práca Carpentera a Dobkina (\citeyear{carpenter2011}), ktorí skúmali minimálnu legálnu hranicu pitia alkoholu v USA a jej vplyv na konzumáciu alkoholu mladých ľudí. Banks a Mazzonna (\citeyear{banks2012}) sa zamerali na zvýšenie minimálnej školskej dochádzky zo štrnásť na pätnásť rokov a skúmali vplyv dodatočného roku štúdia na kognitívne schopnosti v staršom veku. Regresnú diskontinuitu používa ako osvedčenú a efektívnu metódu aj Európska komisia, ktorá ju využíva ako metódu hodnotenia štátnej pomoci. \parencite[s.~20]{ek2014} 
 		
 		\section{Dataset}
 		Využité dáta v tejto práci pochádzajú z databáze športových výsledkov a kurzov Trefík, odkiaľ boli stiahnuté dostupné basketbalové dáta z piatich basketbalových líg – NBL, ŽBL, NBA, WNBA a Euroligy. \parencite{trefik}
 		
-		Po stiahnutí dát bolo potrebné ich upravenie a prefiltrovanie na základe predmetu skúmania a potreby nášho modelu, keďže dáta obsahovali či už nadbytočné informácie alebo nemali vhodnú formu. Následné úpravy sa týkali všetkých datasetov, tzn. českého mužského a ženského basketbalu, amerického mužského a ženského basketbalu a európskeho mužského basketbalu.
+		Po stiahnutí dát bolo potrebné ich upravenie a prefiltrovanie na základe predmetu skúmania a potreby nášho modelu a jeho variácií, keďže dáta obsahovali nadbytočné informácie alebo nemali vhodnú formu. Následné úpravy sa týkali všetkých datasetov. V prvom rade boli zo všetkých datasetov odstránené tie zápasy, ku ktorým neboli dostupné informácie o bodovom stave v polčase, keďže polčasový stav je pre zvolený model kľúčový. Taktiež boli vyradené všetky zápasy ktoré sa skončili remízou, nakoľko táto bakalárska práca sa nebude zaujímať o výsledky po základnej hracej dobe. 
 		
-		V prvom rade boli zo všetkých datasetov odstránené tie zápasy, ku ktorým neboli dostupné informácie o bodovom stave v polčase, keďže polčasový stav je pre nami zvolený model kľúčový. Taktiež boli vyradené všetky zápasy ktoré sa skončili remízou, nakoľko v našej práci sa nebudeme zaujímať o výsledky po základnej hracej dobe. Prehľad počtu vyfiltrovaných dát sa nachádza v tabuľke \ref{table:prefiltrovane-data;}.
+		Následne boli odstránené nepotrebné dáta relevantných zápasov, ktoré nie sú pre túto prácu potrebné, ako napr. dátum zápasu, výsledný bodový stav zápasu či bodový stav za tretiu a štvrtú štvrtinu.
 		
-		Následne boli odstránené nepotrebné dáta relevantných zápasov, ktoré nie sú pre našu prácu potrebné a podstatné, ako napr. dátum zápasu, výsledný bodový stav zápasu či bodový stav za tretiu a štvrtú štvrtinu.
+		Dáta obsahovali informáciu o víťazovi zápasu, pričom hodnota jedna značila výhru domáceho tímu, hodnota dva jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty dva boli prekódované na hodnoty nula. Tak vznikla premenná \textit{WIN}.
 		
-		Dáta obsahovali informáciu o víťazovi zápasu, hodnota jedna značila výhru domáceho tímu, hodnota dva jeho prehru, resp. výhru hosťujúceho tímu. Hodnoty dva boli v tomto prípade prekódované na hodnoty nula. Tak vznikla premenná \textit{WIN}.
+		Ďalej bola vytvorená premennú predstavujúca bodový rozdiel medzi domácim a hosťujúcim tímom v polčase –  \textit{SCORE\_HALF}. Táto premenná nebola priamo dostupná v stiahnutých dátach, ale bolo ju možné  odvodiť od  bodového skóre domáceho a hosťujúceho tímu v polčase. Táto informácia bola získaná spočítaním počtu bodov za prvú a druhú štvrtinu. To znamená, že najprv boli sčítané body za prvú a druhú štvrtinu pre domáci a hosťujúci tím, z čoho vznikli body v polčase pre oba tímy a v náväznosti na to boli rozdielom týchto bodov získané hodnoty pre premennú \textit{SCORE\_HALF}. 
 		
-		Ďalej bolo potrebné vytvoriť premennú predstavujúcu bodový rozdiel medzi domácim a hosťujúcim tímom v polčase – premennú \textit{SCORE\_HALF}. Vytvoriť preto, lebo takáto informácia nebola priamo dostupná v stiahnutých dátach. Bolo možné ju však odvodiť od  bodového skóre domáceho a hosťujúceho tímu v polčase, ktoré však tiež nebolo priamo v dátach. Na základe bodového stavu po prvej a druhej štvrtine, ktorý dostupný bol, sa však dalo ľahko dopočítať. To znamená, že najprv boli sčítané body za prvú a druhú štvrtinu pre domáci a hosťujúci tím, z čoho vznikli body v polčase pre domáci tím a pre hosťujúci tím. Následne boli ich rozdielom získané hodnoty pre premennú \textit{SCORE\_HALF}. 
+		Nutnosťou bolo vytvoriť z dát bodového rozdielu v polčase novú premennú \textit{HALF}, v ktorej bola výhra domáceho tímu po polčase zakódovaná hodnotou nula a prehra hodnotou~jedna. Treba poznamenať, že zápasy, ktoré sa skončili v polčase remízou neboli z datasetu vylúčené a boli kódované ako výhra, nakoľko nás zaujímala zmena šance na výhru, keď sa domáci tím nachádzal striktne pozadu.
 		
-		Nutnosťou bolo vytvoriť z dát bodového rozdielu v polčase novú premennú \textit{HALF}, v ktorej bola výhra domáceho tímu po polčase zakódovaná hodnotou nula a prehra hodnotou~jedna. Treba poznamenať, že zápasy, ktoré sa skončili v polčase remízou neboli z datasetu vylúčené, boli v ňom ponechané a kódované ako výhra, nakoľko nás zaujímala zmena šance na výhru, keď sa domáci tím nachádzal striktne pozadu.
-		
-		Poslednou úpravou dát bolo odčítanie hodnoty jedna od dát predstavujúcich výherný kurz na víťazstvo domáceho tímu.
+		Poslednou úpravou dát bolo odčítanie hodnoty jedna od dát predstavujúcich výherný kurz na víťazstvo domáceho tímu. Zdôvodnenie sa nachádza v časti \ref{sec:pouzitymodel}.
 	
 		\begin{table}[t]
 			\catcode`\-=12
@@ -454,7 +473,7 @@
 		
 		Ďalšou vysvetľujúcou premennou je premenná \textit{SCORE\_HALF}, ktorá udáva bodový rozdiel v polčase medzi dvomi tímami. Premenné \textit{SCORE\_HALF2} a \textit{SCORE\_HALF3} sú umocnením premennej \textit{SCORE\_HALF} na druhú a následne na tretiu. Dôvodom zahrnutia týchto dvoch premenných je, že pravdepodobnosť výhry nemusí byť lineárna v tom, koľko domáci tím prehráva v polčase a s druhým a tretím umocnením premennej \textit{SCORE\_HALF} je možné lepšie prispôsobiť naše dáta tomu, aby bolo možné vidieť skok regresnej diskontinuity, a to za predpokladu, že sa tam nachádza.
 		
-		\textit{BETTING\_RATE} je poslednou vysvetľujúcou premennou, ktorá by mala reprezentovať, ako ovplyvní model to, či je domáci tím favoritom. Iba pre pripomenutie, čím vyššia je premenná, tým vyšší je kurz na víťazstvo domáceho tímu a tý menším favoritom tím je. Platí teda aj naopak, že čím nižší kurz, tým je tím väčším favoritom. Odčítanie hodnoty jedna od kurzu na víťazstvo domáceho tímu nie je nutnosťou, avšak v tejto podobe nám dáva informáciu o čistom zisku z jednotky meny, napr. z jednej koruny a následná interpretácia môže byť jednoduchšia.
+		\textit{BETTING\_RATE} je poslednou vysvetľujúcou premennou, ktorá by mala reprezentovať, ako ovplyvní model to, či je domáci tím favoritom. Iba pre pripomenutie, čím vyššia je premenná, tým vyšší je kurz na víťazstvo domáceho tímu a tý menším favoritom tím je. Platí teda aj naopak, že čím nižší kurz, tým je tím väčším favoritom. Odčítanie hodnoty jedna od kurzu na víťazstvo domáceho tímu nie je nutnosťou, avšak v tejto podobe dáva premenná informáciu o čistom zisku z jednotky meny, napr. z jednej koruny a následná interpretácia môže byť jednoduchšia.
 		
 		Okrem toho model obsahuje úrovňovú konštantu $\alpha$, parametre vysvetľujúcich premenných $\beta _{1}$ až $\beta _{5}$  a náhodnú zložku $\varepsilon_{i}$.
 	
